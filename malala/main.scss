@@ -3,7 +3,11 @@
 // --------- //
 
 // variables & mixins
-@import 'shared/variable';
+@import 'shared/variables';
+@import 'shared/mixins';
+
+// typo
+@import 'shared/typo';
 
 /* reset */
 *,
@@ -17,4 +21,18 @@
     list-style: none;
     font-weight: normal;
     text-transform: uppercase;
+    color: #fff;
 }
+
+// layouts
+@import 'layouts/layout';
+
+// Navbar & Footer
+@import 'components/navbar';
+@import 'components/footer';
+
+// Pages
+@import './malala/_home/home';
+
+// responsive
+@import 'responsive';

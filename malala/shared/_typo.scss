@@ -1,0 +1,51 @@
+// fonts importation
+@font-face {
+    font-family: 'Titre';
+    src: url(/assets/fonts/playlist-script.otf);
+}
+@font-face {
+    font-family: 'sub-title';
+    src: url(/assets/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'bold-sub-title';
+    src: url(/assets/fonts/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'sub';
+    src: url(/assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: 'text';
+    src: url(/assets/fonts/Montserrat-Regular.ttf);
+}
+
+// typo styles
+h1{
+    font-family: 'Titre';
+    font-size: clamp(2em, 10vw + 1em, 7em);
+}
+h2{
+    font-family: 'sub-title';
+}
+h3{
+    font-family: 'bold-sub-title';
+}
+h4,
+a{
+    font-family: 'sub';
+}
+h4{
+    font-size: clamp(2.5em, 10vw + 1em, 5em);
+    color: $secondary;
+    font-family: 'titre';
+    text-transform: initial;
+    text-shadow: #000 0px 0px 5px;
+    width: max-content;
+    margin: 0 auto;    
+}
+p{
+    font-family: 'text';
+    text-align: justify;
+    text-shadow: 1px 1px 2px $shadow, 1px 1px 4px $shadow, 1px 1px 2px $shadow;
+}

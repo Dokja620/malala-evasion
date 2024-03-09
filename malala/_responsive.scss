@@ -1,0 +1,110 @@
+/*Desktop First*/
+.container{
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    border: 2px solid red;
+}
+/*2xl*/
+@media (max-width: 1536px) {
+    .container{
+        max-width: 1280px;
+    }
+}
+
+/*xl*/
+@media (max-width: 1280px) {
+    .container{
+        max-width: 1024px;
+    }
+}
+
+/*lg*/
+@media (max-width: 1024px) {
+    .container{
+        max-width: 768px;
+    }
+
+    // Introduction -Homepage
+    #home .malala{
+        img{
+            top: -80px;
+        }
+    }
+}
+
+/*md*/
+@media (max-width: 768px) {
+    .container{
+        max-width: 640px;
+    }
+
+    //Introduction - Homepage
+    #home{
+        padding-top: 150px;
+        .malala{
+            padding: 3em 2em 1em 1em;
+            h1{
+                top: -75px;
+            }
+            img{
+                top: -75px;
+            }
+        }
+    } 
+
+    // responsive navbar
+    .menu-burger{
+        display: block;
+    }
+    nav{
+        // nav links
+        ul{
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 25%;
+            min-width: 200px;
+            text-align: center;
+            background: rgba($shadow, .3);
+            backdrop-filter: blur(2px);
+            box-shadow: -2px 0px 5px $shadow;
+            transform: translateX(105%);
+        }
+    }
+}
+
+/*sm*/
+@media (max-width: 640px) {
+    .container{
+        max-width: 475px;
+    }
+
+    //Introduction - Homepage
+    #home .malala{
+        h1{
+            top: -50px;
+        }
+        img{
+            top: -50px;
+            right: -20px;
+        }
+    }
+}
+
+/*xs*/
+@media (max-width: 475px) {
+    .container{
+        width: 100%;
+    }
+
+    //Introduction - Homepage
+    #home .malala{
+        h1{
+            top: -30px;
+        }
+    }
+}
