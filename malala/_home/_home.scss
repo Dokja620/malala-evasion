@@ -13,9 +13,7 @@
         @include center-absolute(-100px);
     }
     div{
-        background: rgba($secondary, .5);
-        backdrop-filter: blur(2px);
-        border-radius: $base-border-radius-lg;
+        @include fields($base-border-radius-lg);
         position: relative;
         max-width: 600px;
         width: 95%;
@@ -58,5 +56,25 @@
     height: max-content;
     .container{
         display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 50px auto;
+    }
+}
+.div{
+    @include fields($base-border-radius);
+    max-width: 250px;
+    min-height: 350px;
+    box-shadow: #000 0px 2px 15px;
+    h2{
+        @include center-absolute(-12px);
+        font-size: 1.2em;
+    }
+    img{
+        margin-top: 1em;
+        height: 150px;
+        width: 100%;
     }
 }

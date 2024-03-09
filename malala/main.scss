@@ -32,7 +32,10 @@
 @import 'components/footer';
 
 // Pages
-@import './malala/_home/home';
+@import './_home/home';
+@import './_reservation/reservation';
+@import './_circuit/circuit';
+@import './_tour/tour';
 
 // responsive
 @import 'responsive';

@@ -31,6 +31,12 @@
             top: -80px;
         }
     }
+
+    // Offers 
+    #choice{
+        background: url(/assets/imgs/offers/007.png) bottom center/auto 100% no-repeat ,
+                    linear-gradient(to bottom, transparent, #fff, transparent);
+    }
 }
 
 /*md*/
@@ -53,6 +59,53 @@
         }
     } 
 
+    // Island trip
+    //left
+    .includ{
+        width: 100%;
+        max-width: none;
+        margin-top: 25px;
+        display: flex;
+        gap: 25px;
+        .in,
+        .price{
+            width: 50%;
+            margin-bottom: 20px;
+            height: max-content;
+        }
+    }
+    .reserves{
+        @include button-primary();
+        position: absolute;
+        bottom: 40px;
+        right: 75px;
+    }
+    //right
+    .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+    }
+    .illustration{
+        max-width: none;
+        position: relative;
+        img{
+            width: 100%;
+        }
+        h3{
+            @include center-absolute(50%);
+            font-size: 1.5em;
+        }
+    }
+    .separation{
+        height: 4px;
+        width: 250px;
+        border-radius: 2px;
+        margin: 25px auto;
+    }
+    .descr{
+        width: 100%;
+    }
     // responsive navbar
     .menu-burger{
         display: block;
@@ -92,6 +145,27 @@
             top: -50px;
             right: -20px;
         }
+    }
+
+    .inc,
+    .price{
+        flex-grow: 1;
+    }
+    //left
+    .includ{
+        display: flex;
+        flex-wrap: wrap
+    }
+    .includ .in,
+    .includ .price{
+        width: 100%;
+        margin-bottom: 20px;
+        height: max-content;
+    }
+    .reserves{
+        @include button-primary();
+        position: absolute;
+        @include center-absolute-bottom(-35px)
     }
 }
 

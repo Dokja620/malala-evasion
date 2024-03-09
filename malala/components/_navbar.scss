@@ -1,10 +1,11 @@
 /*Navbar*/
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     background: $secondary;
+    z-index: 5;
 }
 
 // Navbar
@@ -36,7 +37,7 @@ nav{
 // mobile menu
 .menu-burger{
     display: none;
-    position: absolute;
+    position: fixed;
     top: $base-padding;
     right: $base-padding;
     &.shine{

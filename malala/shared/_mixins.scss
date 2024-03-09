@@ -1,11 +1,38 @@
 // Mixins
-@mixin center-absolute($top){
-    text-transform: initial;
-    text-shadow: 4px 4px 0px $shadow;
-    text-align: center;
+@mixin center-absolute($top: 0px){
     position: absolute;
-    top: -100px;
+    top: $top;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+}
+@mixin center-absolute-bottom($bottom: 0px){
+    position: absolute;
+    bottom: $bottom;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+@mixin fields($border: 0px){
+    background: rgba($secondary, .5);
+    backdrop-filter: blur(2px);
+    border-radius: $border;
+}
+
+@mixin button-primary(){
+    width: max-content;
+    font-family: 'text';
+    font-size: 1.1em;
+    background: $secondary;
+    padding: .5em 1.1em;
+    border-radius: 35px;
+    border: 3px solid $primary;
+    box-shadow: -4px 4px 0px $primary;
+    cursor: pointer;
+    transition: .25s all ease-in-out;
+    &:hover{
+        box-shadow: -4px 4px 2px rgba($shadow, .9);
+        padding: .5em 2em;
+    }
 }
