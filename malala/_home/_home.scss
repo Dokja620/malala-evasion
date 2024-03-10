@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 10%;
+    overflow: hidden
 }
 
 .intro {
@@ -16,14 +17,13 @@
         @include fields($base-border-radius-lg);
         position: relative;
         max-width: 600px;
-        width: 95%;
     }
 }
 
 // about Malala Evasion
 .malala {
     padding: 3em 2em 2em 2em;
-
+    margin: 0 15px;
     img {
         position: absolute;
         right: -50px;
@@ -40,9 +40,8 @@
     font-family: 'sub-title';
     font-size: 1.2em;
     text-shadow: 2px 2px 1px $shadow;
-    margin: 1rem 0;
     padding: 1.5em 3em;
-
+    margin: 1rem 15px 0 15px;
     img {
         position: absolute;
         top: -25px;

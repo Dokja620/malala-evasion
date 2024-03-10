@@ -224,6 +224,7 @@ footer span:hover::before {
   align-items: center;
   justify-content: center;
   padding-top: 10%;
+  overflow: hidden;
 }
 
 .intro h1 {
@@ -240,11 +241,11 @@ footer span:hover::before {
   border: 3px solid rgba(56, 182, 255, 0.6);
   position: relative;
   max-width: 600px;
-  width: 95%;
 }
 
 .malala {
   padding: 3em 2em 2em 2em;
+  margin: 0 15px;
 }
 .malala img {
   position: absolute;
@@ -260,8 +261,8 @@ footer span:hover::before {
   font-family: "sub-title";
   font-size: 1.2em;
   text-shadow: 2px 2px 1px rgba(18, 18, 18, 0.6156862745);
-  margin: 1rem 0;
   padding: 1.5em 3em;
+  margin: 1rem 15px 0 15px;
 }
 .soon img {
   position: absolute;
@@ -1089,7 +1090,7 @@ section {
     padding-top: 150px;
   }
   #home .malala {
-    padding: 3em 2em 1em 1em;
+    padding: 3em 15px 1em 15px;
   }
   #home .malala h1 {
     top: -75px;
@@ -1155,9 +1156,6 @@ section {
   .menu-burger {
     display: block;
   }
-  nav {
-    display: none;
-  }
   nav ul {
     flex-direction: column;
     justify-content: center;
@@ -1184,7 +1182,7 @@ section {
   }
   #home .malala img {
     top: -50px;
-    right: -20px;
+    right: -40px;
   }
   .inc,
   .price {
