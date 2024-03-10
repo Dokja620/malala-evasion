@@ -56,6 +56,14 @@ h4 {
   margin: 0 auto;
 }
 
+h5 {
+  font-family: "titre";
+  text-transform: initial;
+  font-size: clamp(3.5em, 5vw + 1em, 5em);
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  width: max-content;
+}
+
 p {
   font-family: "text";
   text-align: justify;
@@ -78,7 +86,7 @@ p {
 
 /* body styles */
 body {
-  background: url(/assets/imgs/main-bg.jpg) 50%/cover no-repeat;
+  background: url(/assets/imgs/secondary-bg.jpg) 50%/cover no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: hidden;
@@ -225,6 +233,7 @@ footer span:hover::before {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 40px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   position: relative;
   max-width: 600px;
   width: 95%;
@@ -276,6 +285,7 @@ footer span:hover::before {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   max-width: 250px;
   min-height: 350px;
   box-shadow: #000 0px 2px 15px;
@@ -309,6 +319,7 @@ form .infos {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   padding: 1em;
   position: relative;
   width: 90%;
@@ -430,6 +441,7 @@ form h2 {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -507,6 +519,7 @@ form h2 {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   width: 30%;
   min-width: 300px;
   border: 3px solid rgba(56, 182, 255, 0.7);
@@ -529,6 +542,127 @@ form h2 {
   text-align: center;
 }
 
+#excursion {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.nav-islands {
+  text-align: center;
+  margin: 25px 0;
+}
+.nav-islands h3 {
+  font-family: "titre";
+  text-transform: initial;
+  font-size: 2.5em;
+  color: #38b6ff;
+  width: max-content;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5137254902), transparent);
+  backdrop-filter: blur(2px);
+}
+.nav-islands button {
+  background: none;
+  border: none;
+  margin: 10px 0.75rem;
+  font-family: "sub";
+  font-size: 1.1em;
+  text-shadow: 0px 2px 2px #38b6ff, 0px 2px 5px #38b6ff;
+  cursor: pointer;
+}
+
+.infos-excu {
+  display: flex;
+  gap: 1.125rem;
+  margin-bottom: 30px;
+}
+
+.preview {
+  position: relative;
+}
+.preview h5 {
+  position: absolute;
+  top: -60px;
+  z-index: 3;
+}
+.preview .lemur {
+  position: absolute;
+  top: -150px;
+  left: 75px;
+  z-index: 2;
+  width: 300px;
+}
+.preview .lemur img {
+  width: 100%;
+}
+
+.swiper {
+  width: 40vw;
+  min-width: 350px;
+  max-width: 800px;
+  height: 350px;
+  border-radius: 20px 20px 0 0;
+  border: 3px solid #fff;
+  box-shadow: 0px 2px 5px rgba(18, 18, 18, 0.6156862745), 0px 2px 10px rgba(18, 18, 18, 0.6156862745), 0px 2px 15px rgba(18, 18, 18, 0.6156862745);
+}
+.swiper img {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.trip {
+  position: relative;
+  background: rgba(56, 182, 255, 0.5);
+  backdrop-filter: blur(2px);
+  border-radius: 0px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
+  margin: 25px 0;
+  padding: 1.125rem;
+  border-radius: 20px;
+}
+.trip div {
+  display: flex;
+  align-items: center;
+  margin: 0 0 5px 0;
+}
+.trip span {
+  color: #38b6ff;
+  font-family: "sub";
+  background: #fff;
+  margin: 0 0.75rem;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.ready {
+  width: 80vw;
+}
+.ready .description {
+  background: rgba(56, 182, 255, 0.5);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
+  padding: 1.125rem;
+  line-height: 21px;
+}
+
+.reserve-a {
+  width: max-content;
+  font-family: "text";
+  font-size: 1.1em;
+  background: #38b6ff;
+  padding: 0.5em 1.1em;
+  border-radius: 35px;
+  border: 3px solid #fff;
+  box-shadow: -4px 4px 0px #fff;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+.reserve-a:hover {
+  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+  padding: 0.5em 2em;
+}
+
 /* Tour de l'île */
 #tour {
   padding-top: 50px;
@@ -541,6 +675,30 @@ form h2 {
   justify-content: space-evenly;
 }
 
+.navigation {
+  width: max-content;
+}
+.navigation span {
+  position: absolute;
+  top: 50%;
+  width: 125px;
+  transform: translateY(-50%);
+  transition: 0.25s all ease-in-out;
+  cursor: pointer;
+}
+.navigation .right {
+  right: -65px;
+}
+.navigation .right:hover {
+  right: -70px;
+}
+.navigation .left {
+  left: -65px;
+}
+.navigation .left:hover {
+  left: -70px;
+}
+
 .includ {
   width: 50%;
   max-width: 350px;
@@ -551,6 +709,7 @@ form h2 {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   border: 3px solid rgba(56, 182, 255, 0.5);
   padding: 2em 1em 2em 1em;
   margin-bottom: 20px;
@@ -605,6 +764,7 @@ h2 {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
   display: flex;
   padding: 1em;
   border: 3px solid rgba(56, 182, 255, 0.5);
@@ -648,6 +808,7 @@ h2 {
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
+  border: 3px solid rgba(56, 182, 255, 0.6);
 }
 .quad span {
   color: #38b6ff;
@@ -677,6 +838,9 @@ h2 {
   .container {
     max-width: 1024px;
   }
+  .infos-excu {
+    align-items: center;
+  }
 }
 /*lg*/
 @media (max-width: 1024px) {
@@ -688,6 +852,30 @@ h2 {
   }
   #choice {
     background: url(/assets/imgs/offers/007.png) bottom center/auto 100% no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
+  }
+  .infos-excu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  .swiper {
+    width: 80vw;
+  }
+  .preview h5 {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .preview .lemur {
+    position: absolute;
+    top: -100px;
+    left: 100%;
+    transform: translateX(-50%) rotate(20deg);
+    z-index: 2;
+    width: 300px;
+  }
+  .preview .lemur img {
+    width: 100%;
   }
 }
 /*md*/

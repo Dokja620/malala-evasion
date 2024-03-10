@@ -9,6 +9,30 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+// navigation through programs
+.navigation{
+    width: max-content;
+    span{
+        position: absolute;
+        top: 50%;
+        width: 125px;
+        transform: translateY(-50%);
+        transition: .25s all ease-in-out;
+        cursor: pointer;
+    }
+    .right{
+        right: -65px;
+        &:hover{
+            right: -70px;
+        }
+    }
+    .left{
+        left: -65px;
+        &:hover{
+            left: -70px;
+        }
+    }
+}
 // left part - booking and what comes with the services
 .includ{
     width: 50%;
@@ -91,11 +115,6 @@ h2{
     margin: $base-margin 0 35px 0;
     @include fields($base-border-radius);
     span{
-        color: $secondary;
-        font-family: 'sub';
-        background: $primary;
-        margin: 0 $base-margin;
-        padding: 5px;
-        border-radius: 7px;
+        @include button-secondary();
     }
 }

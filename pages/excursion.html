@@ -34,62 +34,49 @@
 
 <main>
 <section id="excursion" class="container">
-    <h2>Où voulez vous allez ?</h2>
-    <div class="navigation">
-        <button>Nosy Komba</button>
-        <button>Nosy Tanikely</button>
-        <button>Nosy Iranja</button>
-        <button>Nosy Sakatia</button>
-        <button>Lokobe</button>
+    <!-- picking islands and viewing 'em -->
+    <div class="nav-islands">
+        <h3>Où voulez vous allez ?</h3>
+        <div class="nav">
+            <button>Nosy Komba</button>
+            <button>Nosy Tanikely</button>
+            <button>Nosy Iranja</button>
+            <button>Nosy Sakatia</button>
+            <button>Lokobe</button>
+        </div>
     </div>
-    <div class="excursion">
-        <div class="context">
-            <div class="preview">
-                <!-- absolute elements -->
-                <h1>Nosy Komba</h1>
-                <div class="lemur"><img src="/assets/imgs/excursion/maki-2.png" alt=""></div>
-                <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-1.jpg" alt=""></div>
-                            <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-2.jpg" alt=""></div>
-                            <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-3.jpg" alt=""></div>
-                            ...
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-    
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-    
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                    <!-- Ends here -->
-                    
-                    <div class="with">
-                        <div>
-                            <h3>Information sur l'excursion</h3>
-                            <p>
-                                <span>Inclut:</span>
-                                Transfert -
-                                Eau minérale -
-                                Entrée parcs -
-                                Déjeuner -
-                                Guide
-                            </p>
-                            <p>
-                                <span>Prix:</span>
-                                Prix 60€ / personne
-                                (minimum 3 personnnes)
-                            </p>
-                        </div>
-                    </div>
+
+    <!-- the island infos -->
+    <div class="infos-excu">
+        <!-- Left part -->
+        <div class="preview">
+             <!-- absolute elements -->
+             <h5>Nosy Komba</h5>
+             <div class="lemur"><img src="/assets/imgs/excursion/maki-2.png" alt=""></div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-3.jpg" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+        
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
-            <div class="infos">
+        </div>
+        
+        <!-- Right part -->
+        <div class="ready">
+            <div class="description">
                 <p>
                     Situé entre Nosy Be et le continent, Nosy Komba est souvent appelé 
                     "l'île aux lémuriens" en raison de la présence de ces créatures 
@@ -101,11 +88,18 @@
                     Nosy Komba est également réputé pour ses plages isolées et ses spots 
                     de plongée offrant une belle diversité de faune sous-marine.
                 </p>
-                <div class="reserve" onclick="location.href='/pages/reservation.html';">Réservez</div>
+            </div>
+            <!-- Ends here -->
+            <div class="trip">
+                <h2>Information sur l'excursion</h2>
+                <div><span>Inclut:</span><p> Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide</p></div>
+                <div><span>Prix:</span><p> 60€ / personne (Minimum 3 personnnes)</p></div>
             </div>
         </div>
-        
     </div>
+    <a href="" class="reserve-a">
+        Réservez
+    </a>
 </section>
 </main>
 <footer>
