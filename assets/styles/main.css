@@ -89,7 +89,7 @@ p {
 body {
   background: url(../../assets/imgs/secondary-bg.jpg) 50%/cover no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -1159,9 +1159,9 @@ section {
     min-width: 200px;
     text-align: center;
     background: rgba(18, 18, 18, 0.3);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     box-shadow: -2px 0px 5px rgba(18, 18, 18, 0.6156862745);
-    transform: translateX(105%);
+    transform: translateX(100%);
   }
 }
 /*sm*/
