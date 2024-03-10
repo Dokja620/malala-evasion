@@ -28,4 +28,5 @@ function toggleMenu() {
         }
     });
 }
-s
+
+// Visit Nosy Be

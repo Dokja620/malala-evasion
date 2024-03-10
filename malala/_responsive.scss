@@ -2,7 +2,6 @@
 .container {
     max-width: 1536px;
     margin: 0 auto;
-    padding: 0 .5rem;
 }
 
 /*2xl*/
@@ -132,16 +131,12 @@
     }
 
     .illustration {
-        max-width: none;
-        position: relative;
-
-        img {
-            width: 100%;
-        }
-
-        h3 {
-            @include center-absolute(50%);
-            font-size: 1.5em;
+        width: 100%;
+        max-width: 90vw;
+        height: 255px;
+        background: red;
+        .bg-illu{
+            min-width: 100%;
         }
     }
 
@@ -162,7 +157,7 @@
     }
 
     nav {
-
+        display: none;
         // nav links
         ul {
             flex-direction: column;
