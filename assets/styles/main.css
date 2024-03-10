@@ -87,10 +87,9 @@ p {
 
 /* body styles */
 body {
-  background: url(../../assets/imgs/secondary-bg.webp) 50%/cover no-repeat;
+  background: url(../../assets/imgs/secondary-bg.webp) center/cover no-repeat;
   background-attachment: fixed;
   height: 100vh;
-  max-height: 100vw;
   overflow-x: hidden;
 }
 
