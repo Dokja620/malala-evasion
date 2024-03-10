@@ -1,0 +1,88 @@
+/* Homepage */
+
+/* Introduction */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.intro {
+    h1 {
+        @include center-absolute(-100px);
+    }
+    div {
+        @include fields($base-border-radius-lg);
+        position: relative;
+        max-width: 600px;
+        width: 95%;
+    }
+}
+
+// about Malala Evasion
+.malala {
+    padding: 3em 2em 2em 2em;
+
+    img {
+        position: absolute;
+        right: -50px;
+        top: -100px;
+        transform: rotate(25deg);
+        width: clamp(200px, 50%, 350px);
+    }
+}
+
+// coming soon hotel
+.soon {
+    text-align: center;
+    border: 6px solid #ffffff49;
+    font-family: 'sub-title';
+    font-size: 1.2em;
+    text-shadow: 2px 2px 1px $shadow;
+    margin: 1rem 0;
+    padding: 1.5em 3em;
+
+    img {
+        position: absolute;
+        top: -25px;
+        left: -50px;
+    }
+}
+
+/* Offers */
+#choice {
+    margin-top: 15%;
+    background: url(/assets/imgs/offers/007.png) bottom left/auto 100% no-repeat,
+        url(/assets/imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat,
+        linear-gradient(to bottom, transparent, #fff, transparent);
+    backdrop-filter: blur(2px);
+    height: max-content;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 50px auto;
+    }
+}
+
+.div {
+    @include fields($base-border-radius);
+    max-width: 250px;
+    min-height: 350px;
+    box-shadow: #000 0px 2px 15px;
+
+    h2 {
+        @include center-absolute(-12px);
+        font-size: 1.2em;
+    }
+
+    img {
+        margin-top: 1em;
+        height: 150px;
+        width: 100%;
+    }
+}

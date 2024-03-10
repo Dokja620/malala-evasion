@@ -1,0 +1,76 @@
+/*Navbar*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: $secondary;
+    z-index: 5;
+}
+
+// Navbar
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $base-padding-lg;
+    font-size: 1.1em;
+    text-shadow: 0px 0px 2px $shadow, 0px 2px 2px $shadow;
+
+    // acceuil
+    .home {
+        display: flex;
+        align-items: center;
+    }
+
+    // logo
+    .logo {
+        height: 50px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    // nav links
+    ul {
+        display: flex;
+        gap: $base-padding;
+        transition: .25s all ease-in;
+    }
+}
+
+// mobile menu
+.menu-burger {
+    display: none;
+    position: fixed;
+    top: $base-padding;
+    right: $base-padding;
+
+    &.shine {
+        div {
+            box-shadow: 0px 0px 4px $primary;
+        }
+    }
+
+    div {
+        height: 4px;
+        width: 30px;
+        background: $primary;
+        margin: 4px;
+        border-radius: 2px;
+        transition: .25s all ease-in-out;
+
+        &.shrink {
+            width: 25px;
+        }
+
+        &.shrinks {
+            width: 20px;
+        }
+    }
+}
+
+.mobile-menu {
+    transform: translateX(0);
+}

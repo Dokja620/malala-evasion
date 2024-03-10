@@ -1,0 +1,44 @@
+// --------- //
+// main file //
+// --------- //
+
+// variables & mixins
+@import 'shared/variables';
+@import 'shared/mixins';
+
+// typo
+@import 'shared/typo';
+
+/* reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+// layouts
+@import 'layouts/layout';
+
+// Navbar & Footer
+@import 'components/navbar';
+@import 'components/footer';
+
+// Pages
+@import './_home/home';
+@import './_reservation/reservation';
+@import './_circuit/circuit';
+@import './_excursion/excursion';
+@import './_tour/tour';
+
+// animations
+@import './animations/animations';
+
+// responsive
+@import 'responsive';

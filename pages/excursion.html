@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursion</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <script src="/assets/scripts/site.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+<header id="top">
+    <!-- Navbar -->
+    <nav>
+        <div class="home">
+            <div class="logo" onclick="location.href ='/index.html'"><img src="/assets/imgs/logos/logo.png" alt="malala evasion" width="100%" height="100%"></div>
+            <a href="/index.html">Acceuil</a>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="/pages/excursion.html">Excursion</a></li>
+                <li><a href="/pages/tour.html">Tour de l'îles</a></li>
+                <li><a href="/pages/circuit.html">Circuit-Nord</a></li>
+                <li><a href="/pages/reservation.html">Réservation</a></li>
+            </ul>
+        </div>
+        <div class="menu-burger">
+            <div class="bar-f"></div>
+            <div></div>
+            <div class="bar-s"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section id="excursion" class="container">
+    <!-- picking islands and viewing 'em -->
+    <div class="nav-islands">
+        <h3>Où voulez vous allez ?</h3>
+        <div class="nav">
+            <button>Nosy Komba</button>
+            <button>Nosy Tanikely</button>
+            <button>Nosy Iranja</button>
+            <button>Nosy Sakatia</button>
+            <button>Lokobe</button>
+        </div>
+    </div>
+
+    <!-- the island infos -->
+    <div class="infos-excu">
+        <!-- Left part -->
+        <div class="preview">
+             <!-- absolute elements -->
+             <h5>Nosy Komba</h5>
+             <div class="lemur"><img src="/assets/imgs/excursion/maki-2.png" alt=""></div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="/assets/imgs/excursion/komba/komba-3.jpg" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+        
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        
+        <!-- Right part -->
+        <div class="ready">
+            <div class="description">
+                <p>
+                    Situé entre Nosy Be et le continent, Nosy Komba est souvent appelé 
+                    "l'île aux lémuriens" en raison de la présence de ces créatures 
+                    sympathiques qui peuvent être facilement observées dans leur habitat 
+                    naturel. Outre sa faune riche, l'île est célèbre pour ses villages 
+                    pittoresques où les traditions malgaches sont encore bien vivantes. 
+                    Les visiteurs peuvent parcourir les marchés locaux à la recherche 
+                    d'artisanat, notamment des sculptures sur bois et des textiles. 
+                    Nosy Komba est également réputé pour ses plages isolées et ses spots 
+                    de plongée offrant une belle diversité de faune sous-marine.
+                </p>
+            </div>
+            <!-- Ends here -->
+            <div class="trip">
+                <h2>Information sur l'excursion</h2>
+                <div><span>Inclut:</span><p> Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide</p></div>
+                <div><span>Prix:</span><p> 60€ / personne (Minimum 3 personnnes)</p></div>
+            </div>
+        </div>
+    </div>
+    <a href="" class="reserve-a">
+        Réservez
+    </a>
+</section>
+</main>
+<footer>
+    <div class="reach-us">
+        <div class="soc whatsapp"><a href="#"><img src="/assets/imgs/logos/whatsapp-color-svgrepo-com.svg" alt="logo whatsapp" width="55px"/></a></div>
+        <div class="soc Facebook"><a href="#"><img src="/assets/imgs/logos/facebook-svgrepo-com.svg" alt="logo Facebook" width="55px"/></a></div>
+        <div class="soc gmail"><a href="#"><img src="/assets/imgs/logos/gmail-svgrepo-com.svg" alt="logo gmail" width="55px"/></a></div>
+    </div>
+    <div class="terms"></div>
+    <div class="made"><p>Fait par <span>Ohayo Dev. & Design</span> © 2024</p></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    // autoplay: {
+    //     delay: 3000,
+    // },
+    });
+</script>
+</body>
+</html>
