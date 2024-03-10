@@ -53,9 +53,9 @@
 /* Offers */
 #choice {
     margin-top: 15%;
-    background: url(../../assets/imgs/offers/007.png) bottom left/auto 100% no-repeat,
-        url(../../assets/imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat,
-        linear-gradient(to bottom, transparent, #fff, transparent);
+    background: url(../imgs/offers/007.png) bottom left/auto 100% no-repeat,
+        url(../imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat,
+        linear-gradient(to bottom, transparent, #ffffff7d, transparent);
     backdrop-filter: blur(2px);
     height: max-content;
 
@@ -71,15 +71,17 @@
 
 .div {
     @include fields($base-border-radius);
+    border: none;
     max-width: 250px;
     min-height: 350px;
     box-shadow: #000 0px 2px 15px;
-
     h2 {
         @include center-absolute(-12px);
         font-size: 1.2em;
     }
-
+    p{
+        margin: $base-margin;
+    }
     img {
         margin-top: 1em;
         height: 150px;

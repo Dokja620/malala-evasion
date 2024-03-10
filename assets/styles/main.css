@@ -5,23 +5,23 @@
 
 @font-face {
   font-family: "Titre";
-  src: url(../../assets/fonts/playlist-script.otf);
+  src: url(../fonts/playlist-script.otf);
 }
 @font-face {
   font-family: "sub-title";
-  src: url(../../assets/fonts/Montserrat-Bold.ttf);
+  src: url(../fonts/Montserrat-Bold.ttf);
 }
 @font-face {
   font-family: "bold-sub-title";
-  src: url(../../assets/fonts/Montserrat-ExtraBold.ttf);
+  src: url(../fonts/Montserrat-ExtraBold.ttf);
 }
 @font-face {
   font-family: "sub";
-  src: url(../../assets/fonts/Montserrat-Medium.ttf);
+  src: url(../fonts/Montserrat-Medium.ttf);
 }
 @font-face {
   font-family: "text";
-  src: url(../../assets/fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 h1 {
   font-family: "Titre";
@@ -82,6 +82,7 @@ p {
   font-weight: normal;
   text-transform: uppercase;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 /* body styles */
@@ -270,7 +271,7 @@ footer span:hover::before {
 /* Offers */
 #choice {
   margin-top: 15%;
-  background: url(../../assets/imgs/offers/007.png) bottom left/auto 100% no-repeat, url(../../assets/imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
+  background: url(../imgs/offers/007.png) bottom left/auto 100% no-repeat, url(../imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat, linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4901960784), transparent);
   backdrop-filter: blur(2px);
   height: max-content;
 }
@@ -288,6 +289,7 @@ footer span:hover::before {
   backdrop-filter: blur(2px);
   border-radius: 20px;
   border: 3px solid rgba(56, 182, 255, 0.6);
+  border: none;
   max-width: 250px;
   min-height: 350px;
   box-shadow: #000 0px 2px 15px;
@@ -299,6 +301,9 @@ footer span:hover::before {
   transform: translateX(-50%);
   width: max-content;
   font-size: 1.2em;
+}
+.div p {
+  margin: 0.75rem;
 }
 .div img {
   margin-top: 1em;
@@ -1035,7 +1040,7 @@ section {
     top: -80px;
   }
   #choice {
-    background: url(/assets/imgs/offers/007.png) bottom center/auto 100% no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
+    background: url(../imgs/offers/007.png) bottom center/auto 100% no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
   }
   .infos-excu {
     display: flex;
