@@ -90,6 +90,7 @@ body {
   background: url(../../assets/imgs/secondary-bg.webp) 50%/cover no-repeat;
   background-attachment: fixed;
   height: 100vh;
+  max-height: 100vw;
   overflow-x: hidden;
 }
 
@@ -1026,7 +1027,6 @@ section {
 .container {
   max-width: 1536px;
   margin: 0 auto;
-  padding: 0 0.5rem;
 }
 
 /*2xl*/
@@ -1154,6 +1154,9 @@ section {
   }
   .menu-burger {
     display: block;
+  }
+  nav {
+    display: none;
   }
   nav ul {
     flex-direction: column;
