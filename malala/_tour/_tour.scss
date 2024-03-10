@@ -52,7 +52,7 @@
     width: 50%;
     max-width: 350px;
     order: 2;
-
+    margin: $base-margin 20px 35px 20px;
     .in,
     .price {
         @include fields($base-border-radius);
@@ -137,11 +137,10 @@ h2 {
 
 // Quad proposition
 .quad {
-    width: 100%;
     max-width: 800px;
     border: 3px solid rgba($secondary, .6);
     padding: $base-padding-lg;
-    margin: $base-margin $base-margin 35px $base-margin;
+    margin: $base-margin 20px 35px 20px;
     @include fields($base-border-radius);
 
     span {

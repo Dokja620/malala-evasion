@@ -376,6 +376,7 @@ form h2 {
 
 .chos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
 }
@@ -395,7 +396,7 @@ form h2 {
   padding: 0.4em;
   color: #fff;
   border-radius: 7px;
-  width: max-content;
+  max-width: max-content;
   margin: 15px auto;
   text-shadow: 0px 0px 5px var(--clr-primary);
   cursor: pointer;
@@ -457,7 +458,7 @@ form h2 {
   justify-content: space-evenly;
   position: relative;
   padding: 1.125rem 0.75rem;
-  margin-top: 25px;
+  margin: 20px;
 }
 .program h3 {
   position: absolute;
@@ -522,7 +523,7 @@ form h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
-  margin-top: 25px;
+  margin: 25px 20px 0 20px;
 }
 .included .inc,
 .included .price {
@@ -608,7 +609,7 @@ form h2 {
 
 .swiper {
   width: 40vw;
-  min-width: 350px;
+  min-width: 300px;
   max-width: 800px;
   height: 350px;
   border-radius: 20px 20px 0 0;
@@ -720,6 +721,7 @@ form h2 {
   width: 50%;
   max-width: 350px;
   order: 2;
+  margin: 0.75rem 20px 35px 20px;
 }
 .includ .in,
 .includ .price {
@@ -823,11 +825,10 @@ h2 {
 }
 
 .quad {
-  width: 100%;
   max-width: 800px;
   border: 3px solid rgba(56, 182, 255, 0.6);
   padding: 1.125rem;
-  margin: 0.75rem 0.75rem 35px 0.75rem;
+  margin: 0.75rem 20px 35px 20px;
   background: rgba(56, 182, 255, 0.5);
   backdrop-filter: blur(2px);
   border-radius: 20px;
@@ -1219,6 +1220,9 @@ section {
     box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
     padding: 0.5em 2em;
   }
+  .preview .lemur {
+    display: none;
+  }
 }
 /*xs*/
 @media (max-width: 475px) {
@@ -1227,5 +1231,34 @@ section {
   }
   #home .malala h1 {
     top: -30px;
+  }
+  .content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .boxs {
+    overflow-x: hidden;
+    font-size: 0.9em;
+  }
+  .quad span {
+    color: #38b6ff;
+    font-family: "sub";
+    background: #fff;
+    margin: 0 0.75rem;
+    padding: 5px;
+    border-radius: 7px;
+    margin: 0 50% 0 0;
+    line-height: 40px;
+  }
+  #circuit h4 {
+    font-size: 0.9em;
+  }
+  form h2 {
+    font-size: 1.1em;
+    letter-spacing: 0px;
+  }
+  .politique p {
+    letter-spacing: 0px;
+    font-size: 0.9em;
   }
 }
