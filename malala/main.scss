@@ -12,8 +12,7 @@
 /* reset */
 *,
 *::after,
-*::before
-{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,6 +36,9 @@
 @import './_circuit/circuit';
 @import './_excursion/excursion';
 @import './_tour/tour';
+
+// animations
+@import './animations/animations';
 
 // responsive
 @import 'responsive';

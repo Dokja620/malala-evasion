@@ -1,7 +1,8 @@
 /*Circuit-Nord / Fully responsive*/
-#circuit{
+#circuit {
     padding-top: 50px;
-    h4{
+
+    h4 {
         font-family: 'sub';
         text-align: center;
         font-size: 1em;
@@ -9,7 +10,8 @@
         margin: 0 auto;
         line-height: 25px;
         text-shadow: 0px 0px 5px $secondary;
-        span{
+
+        span {
             color: $secondary;
             background: $primary;
             padding: .4em;
@@ -17,7 +19,8 @@
         }
     }
 }
-.program{
+
+.program {
     @include fields($base-border-radius);
     display: flex;
     flex-wrap: wrap;
@@ -25,30 +28,35 @@
     position: relative;
     padding: $base-padding-lg $base-padding;
     margin-top: 25px;
-    h3{
+
+    h3 {
         @include center-absolute(-10px);
         font-size: 1.3em;
     }
 }
+
 //circled places
-.places{
+.places {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     margin: 15px 0;
-    .img{
+
+    .img {
         width: 200px;
         height: 200px;
         overflow: hidden;
         border-radius: 50%;
         border: 4px solid #fff;
-        img{
+
+        img {
             object-fit: cover;
             height: 100%;
         }
     }
-    p{
+
+    p {
         font-family: 'sub-title';
         text-align: center;
         font-size: 1.2em;
@@ -56,20 +64,23 @@
         letter-spacing: 2px;
     }
 }
-.book{
+
+.book {
     height: max-content;
     @include center-absolute-bottom(-25px);
     @include button-primary();
 }
+
 //Inclut dans l'excursion
-.included{
+.included {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
     margin-top: 25px;
+
     .inc,
-    .price{
+    .price {
         @include fields($base-border-radius);
         width: 30%;
         min-width: 300px;
@@ -78,13 +89,15 @@
         margin: 1em 0;
         line-height: 30px;
         position: relative;
-        h3{
+
+        h3 {
             @include center-absolute(-15px);
             font-size: 1.3em;
             letter-spacing: 2px;
         }
     }
-    p{
+
+    p {
         text-align: center;
     }
 }

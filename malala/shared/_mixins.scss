@@ -1,12 +1,13 @@
 // Mixins
-@mixin center-absolute($top: 0px){
+@mixin center-absolute($top: 0px) {
     position: absolute;
     top: $top;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
 }
-@mixin center-absolute-bottom($bottom: 0px){
+
+@mixin center-absolute-bottom($bottom: 0px) {
     position: absolute;
     bottom: $bottom;
     left: 50%;
@@ -14,14 +15,14 @@
     width: max-content;
 }
 
-@mixin fields($border: 0px){
+@mixin fields($border: 0px) {
     background: rgba($secondary, .5);
     backdrop-filter: blur(2px);
     border-radius: $border;
     border: 3px solid rgba($secondary, .6);
 }
 
-@mixin button-primary(){
+@mixin button-primary() {
     width: max-content;
     font-family: 'text';
     font-size: 1.1em;
@@ -32,12 +33,14 @@
     box-shadow: -4px 4px 0px $primary;
     cursor: pointer;
     transition: .25s all ease-in-out;
-    &:hover{
+
+    &:hover {
         box-shadow: -4px 4px 2px rgba($shadow, .9);
         padding: .5em 2em;
     }
 }
-@mixin button-secondary(){
+
+@mixin button-secondary() {
     color: $secondary;
     font-family: 'sub';
     background: $primary;

@@ -1,72 +1,77 @@
 /*Desktop First*/
-.container{
+.container {
     max-width: 1536px;
     margin: 0 auto;
     padding: 0 .5rem;
     border: 2px solid red;
 }
+
 /*2xl*/
 @media (max-width: 1536px) {
-    .container{
+    .container {
         max-width: 1280px;
     }
 }
 
 /*xl*/
 @media (max-width: 1280px) {
-    .container{
+    .container {
         max-width: 1024px;
     }
-    
+
     // Island infos
-    .infos-excu{
+    .infos-excu {
         align-items: center;
     }
 }
 
 /*lg*/
 @media (max-width: 1024px) {
-    .container{
+    .container {
         max-width: 768px;
     }
 
     // Introduction -Homepage
-    #home .malala{
-        img{
+    #home .malala {
+        img {
             top: -80px;
         }
     }
 
     // Offers 
-    #choice{
-        background: url(/assets/imgs/offers/007.png) bottom center/auto 100% no-repeat ,
-                    linear-gradient(to bottom, transparent, #fff, transparent);
+    #choice {
+        background: url(/assets/imgs/offers/007.png) bottom center/auto 100% no-repeat,
+            linear-gradient(to bottom, transparent, #fff, transparent);
     }
 
     // excursion
-    .infos-excu{
+    .infos-excu {
         display: flex;
         flex-direction: column;
         margin-top: 10%;
     }
+
     // slider
-    .swiper{
+    .swiper {
         width: 80vw;
     }
-    .preview{
-        h5{
+
+    .preview {
+        h5 {
             top: -50px;
             left: 50%;
             transform: translateX(-50%);
         }
-        .lemur{
+
+        .lemur {
             position: absolute;
             top: -100px;
             left: 100%;
             transform: translateX(-50%) rotate(20deg);
             z-index: 2;
             width: 300px;
-            img{
+
+            img {
                 width: 100%;
             }
         }
@@ -75,78 +80,92 @@
 
 /*md*/
 @media (max-width: 768px) {
-    .container{
+    .container {
         max-width: 640px;
     }
 
     //Introduction - Homepage
-    #home{
+    #home {
         padding-top: 150px;
-        .malala{
+
+        .malala {
             padding: 3em 2em 1em 1em;
-            h1{
+
+            h1 {
                 top: -75px;
             }
-            img{
+
+            img {
                 top: -75px;
             }
         }
-    } 
+    }
 
     // Island trip
     //left
-    .includ{
+    .includ {
         width: 100%;
         max-width: none;
         margin-top: 25px;
         display: flex;
         gap: 25px;
+
         .in,
-        .price{
+        .price {
             width: 50%;
             margin-bottom: 20px;
             height: max-content;
         }
     }
-    .reserves{
+
+    .reserves {
         @include button-primary();
         position: absolute;
         bottom: 40px;
         right: 75px;
     }
+
     //right
-    .content{
+    .content {
         display: flex;
         flex-direction: column;
         max-width: 800px;
     }
-    .illustration{
+
+    .illustration {
         max-width: none;
         position: relative;
-        img{
+
+        img {
             width: 100%;
         }
-        h3{
+
+        h3 {
             @include center-absolute(50%);
             font-size: 1.5em;
         }
     }
-    .separation{
+
+    .separation {
         height: 4px;
         width: 250px;
         border-radius: 2px;
         margin: 25px auto;
     }
-    .descr{
+
+    .descr {
         width: 100%;
     }
+
     // responsive navbar
-    .menu-burger{
+    .menu-burger {
         display: block;
     }
-    nav{
+
+    nav {
+
         // nav links
-        ul{
+        ul {
             flex-direction: column;
             justify-content: center;
             position: absolute;
@@ -166,37 +185,41 @@
 
 /*sm*/
 @media (max-width: 640px) {
-    .container{
+    .container {
         max-width: 475px;
     }
 
     //Introduction - Homepage
-    #home .malala{
-        h1{
+    #home .malala {
+        h1 {
             top: -50px;
         }
-        img{
+
+        img {
             top: -50px;
             right: -20px;
         }
     }
 
     .inc,
-    .price{
+    .price {
         flex-grow: 1;
     }
+
     //left
-    .includ{
+    .includ {
         display: flex;
         flex-wrap: wrap
     }
+
     .includ .in,
-    .includ .price{
+    .includ .price {
         width: 100%;
         margin-bottom: 20px;
         height: max-content;
     }
-    .reserves{
+
+    .reserves {
         @include button-primary();
         position: absolute;
         @include center-absolute-bottom(-35px)
@@ -205,13 +228,13 @@
 
 /*xs*/
 @media (max-width: 475px) {
-    .container{
+    .container {
         width: 100%;
     }
 
     //Introduction - Homepage
-    #home .malala{
-        h1{
+    #home .malala {
+        h1 {
             top: -30px;
         }
     }

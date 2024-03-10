@@ -1,18 +1,20 @@
 /* Tour de l'île */
-#tour{
+#tour {
     padding-top: 50px;
     position: relative;
 }
 
-.boxs{
+.boxs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 // navigation through programs
-.navigation{
+.navigation {
     width: max-content;
-    span{
+
+    span {
         position: absolute;
         top: 50%;
         width: 125px;
@@ -20,101 +22,116 @@
         transition: .25s all ease-in-out;
         cursor: pointer;
     }
-    .right{
+
+    .right {
         right: -65px;
-        &:hover{
+
+        &:hover {
             right: -70px;
         }
     }
-    .left{
+
+    .left {
         left: -65px;
-        &:hover{
+
+        &:hover {
             left: -70px;
         }
     }
 }
+
 // left part - booking and what comes with the services
-.includ{
+.includ {
     width: 50%;
     max-width: 350px;
     order: 2;
+
     .in,
-    .price{
+    .price {
         @include fields($base-border-radius);
         border: 3px solid rgba($secondary, .5);
         padding: 2em 1em 2em 1em;
         margin-bottom: 20px;
-        p{
+
+        p {
             text-align: center;
             line-height: 30px;
         }
     }
 }
 
-h2{
+h2 {
     @include center-absolute(-12px);
     font-size: 1.2em;
 }
 
-.in{
-    img{
+.in {
+    img {
         position: absolute;
         width: 125px;
-        &.one{
+
+        &.one {
             top: -60px;
             left: -25px;
         }
-        &.two{
+
+        &.two {
             bottom: -25px;
             right: -40px;
         }
     }
 }
 
-.reserves{
+.reserves {
     @include button-primary();
     margin: 0 auto;
 }
 
 // right part - description
-.content{
+.content {
     @include fields($base-border-radius);
     display: flex;
     padding: 1em;
     border: 3px solid rgba($secondary, .5);
     max-width: 800px;
 }
-.illustration{
+
+.illustration {
     max-width: 350px;
     position: relative;
-    img{
+
+    img {
         width: 100%;
     }
-    h3{
+
+    h3 {
         @include center-absolute(50%);
         font-size: 1.5em;
     }
 }
-.separation{
+
+.separation {
     height: 250px;
     width: 4px;
     border-radius: 2px;
     margin: auto 25px;
     background: rgba($secondary, .6);
 }
-.descr{
+
+.descr {
     width: 45ch;
 }
 
 // Quad proposition
-.quad{
+.quad {
     width: 100%;
     max-width: 800px;
     border: 3px solid rgba($secondary, .6);
     padding: $base-padding-lg;
     margin: $base-margin 0 35px 0;
     @include fields($base-border-radius);
-    span{
+
+    span {
         @include button-secondary();
     }
 }

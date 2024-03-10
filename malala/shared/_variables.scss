@@ -16,7 +16,7 @@ $colors: (
     'white': white,
 );
 
-.test-btn{
+.test-btn {
     background-color: map-get($colors, 'purple');
 }
 

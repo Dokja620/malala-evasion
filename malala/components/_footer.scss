@@ -1,5 +1,5 @@
 /* Footer */
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,35 +10,42 @@ footer{
     box-shadow: #000 20px -12px 50px, inset #00000070 0px 12px 10px;
     margin-top: 150px;
     padding: 25px 0 10px 0;
-    .reach-us{
+
+    .reach-us {
         display: flex;
         justify-content: center;
         gap: 25px;
         margin: 15px 0 30px 0;
     }
-    .soc{
+
+    .soc {
         width: max-content;
         cursor: pointer;
-        img{
+
+        img {
             height: 40px;
             transition: .25s scale ease-in-out;
-            &:hover{
+
+            &:hover {
                 scale: 1.1;
             }
         }
     }
-    .made{
-        p{
+
+    .made {
+        p {
             font-size: 1em;
             text-transform: none;
         }
     }
-    span{
+
+    span {
         text-transform: none;
         cursor: pointer;
         position: relative;
         margin-right: 15px;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             bottom: -2px;
@@ -51,7 +58,8 @@ footer{
             box-shadow: #000 1px 1px 2px;
             transition: .25s width ease-in-out;
         }
-        &:hover::before{
+
+        &:hover::before {
             width: 75%;
         }
     }
