@@ -11,6 +11,9 @@
 }
 
 // navigation through programs
+.prevv{
+    position: relative;
+}
 .navigation {
     width: max-content;
 
@@ -29,6 +32,10 @@
         &:hover {
             right: -70px;
         }
+    }
+
+    img{
+        width: 100%;
     }
 
     .left {
@@ -52,7 +59,6 @@
         border: 3px solid rgba($secondary, .5);
         padding: 2em 1em 2em 1em;
         margin-bottom: 20px;
-
         p {
             text-align: center;
             line-height: 30px;
@@ -92,21 +98,28 @@ h2 {
     @include fields($base-border-radius);
     display: flex;
     padding: 1em;
+    margin: $base-margin;
     border: 3px solid rgba($secondary, .5);
     max-width: 800px;
 }
-
 .illustration {
-    max-width: 350px;
-    position: relative;
-
-    img {
-        width: 100%;
+    width: 350px;
+    height: 255px;
+    overflow: hidden;
+    .bg-illu{
+        width: auto;
+        min-width: 350px;
+        height: 100%;
     }
-
     h3 {
-        @include center-absolute(50%);
+        @include center-absolute(45%);
+        font-family: 'text';
         font-size: 1.5em;
+        text-shadow:    0px 0px 2px #000,
+                        0px 0px 5px #000,
+                        0px 0px 5px #000,
+                        0px 0px 10px #000,
+                        0px 0px 10px #000;
     }
 }
 
@@ -128,7 +141,7 @@ h2 {
     max-width: 800px;
     border: 3px solid rgba($secondary, .6);
     padding: $base-padding-lg;
-    margin: $base-margin 0 35px 0;
+    margin: $base-margin $base-margin 35px $base-margin;
     @include fields($base-border-radius);
 
     span {
