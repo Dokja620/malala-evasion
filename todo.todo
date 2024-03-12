@@ -8,3 +8,16 @@
 - 1 - tour de l'ile
 
 !! nav bar ugly af… Well it's not blur bg so yeah ugly
+
+- price and included stuff in excursion
+
+id="switch-btn"
+    all below will change according to the buttons inside this one
+id="swiper-slider"
+<!-- Slides --> height swiper-slide [1 -8], [1 -8], [1 -8], [1 -8], [1 -8] like this i guess 
+    <div class="swiper-slide"><img src="../assets/imgs/excursion/komba/komba-1.jpg" alt=""></div>
+    
+id="description"
+id="aminities"
+id="price"
+id="title"

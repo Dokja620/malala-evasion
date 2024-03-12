@@ -26,9 +26,14 @@ nav {
     // logo
     .logo {
         height: 50px;
+        cursor: pointer;
 
         img {
             object-fit: cover;
+            transition: .25s all ease-in-out;
+            &:hover{
+                scale: 1.125;
+            }
         }
     }
 

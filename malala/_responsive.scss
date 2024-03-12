@@ -21,6 +21,27 @@
     .infos-excu {
         align-items: center;
     }
+
+    // absolute flowers
+    .flowers{
+        img{
+            position: absolute;
+            width: 125px;
+            top: -65px;
+        }
+        .flo-1{
+            left: 30px;
+        }
+        .flo-2{
+            left: -15px;
+        }
+        .flo-3{
+            display: none;
+        }
+        .flo-4{
+            display: none;
+        }
+    }
 }
 
 /*lg*/
@@ -169,7 +190,7 @@
             width: 25%;
             min-width: 200px;
             text-align: center;
-            background: rgba($shadow, 1);
+            background: rgba($shadow, 0.4);
             backdrop-filter: blur(3px);
             box-shadow: -2px 0px 5px $shadow;
         }
@@ -223,6 +244,11 @@
         .lemur {
             display: none;
         }
+    }
+
+    // circuit
+    .program{
+        margin: 75px 20px 20px 20px;
     }
 }
 

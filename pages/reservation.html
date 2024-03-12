@@ -6,6 +6,8 @@
     <title>Réservation</title>
     <link rel="stylesheet" href="../assets/styles/main.css">
     <script src="../assets/scripts/site.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="../assets/scripts/reservation.js" defer></script>
 </head>
 <body>
 <header id="top">
@@ -20,7 +22,7 @@
                 <li><a href="../pages/excursion.html">Excursion</a></li>
                 <li><a href="../pages/tour.html">Tour de l'îles</a></li>
                 <li><a href="../pages/circuit.html">Circuit-Nord</a></li>
-                <li><a href="#">Réservation</a></li>
+                <li><a href="#" class="active">Réservation</a></li>
             </ul>
         </div>
         <div class="menu-burger">
@@ -34,7 +36,7 @@
 <main>
 <section id="reservation" class="container">
     <h1>Réservation</h1>
-    <form>
+    <form id="contact-form">
         <div class="client">
             <div class="infos">
                 <h2>Informations du client</h2>
@@ -65,13 +67,15 @@
                 <div>
                     <label>Choix de l'excursion :</label>
                     <span class="chos">
-                        <select name="island-choice" id="pick-one">
+                        <select name="island-choice" id="pick-one"> // TODO style options value 
                             <option value="">Faites votre choix</option>
                             <option value="Nosy komba">Nosy komba</option>
                             <option value="Nosy Tanikely">Nosy Tanikely</option>
-                            <option value="Nosy Iranja">Nosy Iranja</option>
+                            <option value="Nosy Iranja">Nosy Iranja</option> // TODO nuité add
                             <option value="Nosy Sakatia">Nosy Sakatia</option>
                             <option value="Lokobe">Lokobe</option>
+                            <option value="Lokobe">Tour de l'île</option> // TODO add quad
+                            <option value="Lokobe">Circuit-Nord</option>
                         </select>
                         <input type="text" name="price" placeholder="00.00€">
                     </span>
@@ -80,15 +84,27 @@
                     <label>Date de l'excursion :</label>
                     <input type="date" name="island">
                 </div>
+                <div class="optional">
+                    <div class="optional-1">
+                        <label>Location Quad :</label>
+                        <input type="checkbox" name="quad" id="quad">
+                    </div>
+                    <div class="optional-2">
+                        <label>Location Quad :</label>
+                        <input type="checkbox" name="quad" id="quad">
+                    </div>
+                </div>
     
                 <div>
                     <p>Mode de paiement</p>
                     <div class="choice">
-                        <span><input type="radio" name="payment" id="bank"><label for="bank">Par carte bancaire</label></span>
-                        <span><input type="radio" name="payment" id="mobile"><label for="mobile">Mobile money</label></span>
-                        <span><input type="radio" name="payment" id="here"><label for="here">Sur place</label></span>
+                        <span><input type="radio" name="payment" id="bank" value="Par carte bancaire"><label for="bank">Par carte bancaire</label></span>
+                        <span><input type="radio" name="payment" id="mobile" value="Mobile money"><label for="mobile">Mobile money</label></span>
+                        <span><input type="radio" name="payment" id="here" value="Sur place"><label for="here">Sur place</label></span>
                     </div>
-                </div>
+                    <input type="hidden" name="payment_method" id="payment_method">
+
+                </div>                
                 
             </div>
         </div>

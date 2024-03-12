@@ -6,6 +6,7 @@
     <title>Excursion</title>
     <link rel="stylesheet" href="../assets/styles/main.css">
     <script src="../assets/scripts/site.js" defer></script>
+    <script src="../assets/scripts/excursion.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"../>
 </head>
 <body>
@@ -18,7 +19,7 @@
         </div>
         <div>
             <ul class="nav-links">
-                <li><a href="#">Excursion</a></li>
+                <li><a href="#" class="active">Excursion</a></li>
                 <li><a href="../pages/tour.html">Tour de l'îles</a></li>
                 <li><a href="../pages/circuit.html">Circuit-Nord</a></li>
                 <li><a href="../pages/reservation.html">Réservation</a></li>
@@ -37,7 +38,7 @@
     <!-- picking islands and viewing 'em -->
     <div class="nav-islands">
         <h3>Où voulez vous allez ?</h3>
-        <div class="nav">
+        <div class="nav" id="switch-btn">
             <button>Nosy Komba</button>
             <button>Nosy Tanikely</button>
             <button>Nosy Iranja</button>
@@ -51,16 +52,24 @@
         <!-- Left part -->
         <div class="preview">
              <!-- absolute elements -->
-             <h5>Nosy Komba</h5>
+             <h5 id="title">Nosy Komba</h5>
              <div class="lemur"><img src="../assets/imgs/excursion/maki-2.png" alt=""></div>
             <!-- Slider main container -->
             <div class="swiper">
                 <!-- Additional required wrapper -->
+                <!-- Slider Komba -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><img src="../assets/imgs/excursion/komba/komba-1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/imgs/excursion/komba/komba-2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/imgs/excursion/komba/komba-3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-001.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-002.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-003.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-004.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-005.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-006.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-007.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-008.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-009.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="../assets/imgs/Nosy/Komba/kom-010.webp" alt=""></div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -77,7 +86,7 @@
         <!-- Right part -->
         <div class="ready">
             <div class="description">
-                <p>
+                <p id="description">
                     Situé entre Nosy Be et le continent, Nosy Komba est souvent appelé 
                     "l'île aux lémuriens" en raison de la présence de ces créatures 
                     sympathiques qui peuvent être facilement observées dans leur habitat 
@@ -92,8 +101,8 @@
             <!-- Ends here -->
             <div class="trip">
                 <h2>Information sur l'excursion</h2>
-                <div><span>Inclut:</span><p> Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide</p></div>
-                <div><span>Prix:</span><p> 60€ / personne (Minimum 3 personnnes)</p></div>
+                <div><span>Inclut:</span><p id="aminities"> Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide</p></div>
+                <div><span>Prix:</span><p id="price"> 55€ / personne (Minimum 3 personnnes)</p></div>
             </div>
         </div>
     </div>
@@ -135,7 +144,7 @@
     },
     // autoplay: {
     //     delay: 3000,
-    // },
+    // }, // TODO Activate this later
     });
 </script>
 </body>
