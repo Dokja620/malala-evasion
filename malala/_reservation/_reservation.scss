@@ -21,6 +21,8 @@ form {
 
     h2 {
         @include center-absolute(-12px);
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
         font-size: 1.2em;
         letter-spacing: 2px;
@@ -87,11 +89,13 @@ form {
 // Optional services
 .optional {
     display: flex;
+
     span {
         font-size: 1em;
     }
+
     #optional-1,
-    #optional-2{
+    #optional-2 {
         display: none;
     }
 }
@@ -109,6 +113,8 @@ form {
     padding: .4em;
     color: $primary;
     border-radius: 7px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
     max-width: max-content;
     margin: 15px auto;
     text-shadow: 0px 0px 5px var(--clr-primary);
@@ -132,7 +138,7 @@ form {
 }
 
 // thanking popup
-.popup{
+.popup {
     position: absolute;
     @include center-absolute(50%);
     z-index: 5;
@@ -140,28 +146,34 @@ form {
     padding: $base-margin-xl;
     border-radius: $base-border-radius;
     box-shadow: $secondary 0px 0px 5px,
-                $secondary 0px 0px 10px,
-                $secondary 0px 0px 15px,
-                $secondary 0px 0px 20px,
-                $secondary 0px 0px 25px,
-                $secondary 0px 0px 30px,
-                $secondary 0px 0px 50px;
+        $secondary 0px 0px 10px,
+        $secondary 0px 0px 15px,
+        $secondary 0px 0px 20px,
+        $secondary 0px 0px 25px,
+        $secondary 0px 0px 30px,
+        $secondary 0px 0px 50px;
     width: 40ch;
     text-align: center;
-    animation: the-popup .25s both;
-    p{
+    -webkit-animation: the-popup .25s both;
+            animation: the-popup .25s both;
+
+    p {
         text-align: center;
     }
-    .btn{
+
+    .btn {
         font-family: 'sub';
         padding: 5px 15px;
         margin: 5px auto;
         border: 2px solid $primary;
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
         border-radius: $base-border-radius;
         cursor: pointer;
         transition: .25s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
-        &:hover{
+
+        &:hover {
             padding: 5px 20px;
         }
     }

@@ -11,10 +11,13 @@
 }
 
 // navigation through programs
-.prevv{
+.prevv {
     position: relative;
 }
+
 .navigation {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 
     span {
@@ -34,7 +37,7 @@
         }
     }
 
-    img{
+    img {
         width: 100%;
     }
 
@@ -53,12 +56,14 @@
     max-width: 350px;
     order: 2;
     margin: $base-margin 20px 35px 20px;
+
     .in,
     .price {
         @include fields($base-border-radius);
         border: 3px solid rgba($secondary, .5);
         padding: 2em 1em 2em 1em;
         margin-bottom: 20px;
+
         p {
             text-align: center;
             line-height: 30px;
@@ -102,24 +107,27 @@ h2 {
     border: 3px solid rgba($secondary, .5);
     max-width: 800px;
 }
+
 .illustration {
     width: 350px;
     height: 255px;
     overflow: hidden;
-    .bg-illu{
+
+    .bg-illu {
         width: auto;
         min-width: 350px;
         height: 100%;
     }
+
     h3 {
         @include center-absolute(45%);
         font-family: 'text';
         font-size: 1.5em;
-        text-shadow:    0px 0px 2px #000,
-                        0px 0px 5px #000,
-                        0px 0px 5px #000,
-                        0px 0px 10px #000,
-                        0px 0px 10px #000;
+        text-shadow: 0px 0px 2px #000,
+            0px 0px 5px #000,
+            0px 0px 5px #000,
+            0px 0px 10px #000,
+            0px 0px 10px #000;
     }
 }
 

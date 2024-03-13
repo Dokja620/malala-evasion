@@ -29,9 +29,11 @@ nav {
         cursor: pointer;
 
         img {
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             transition: .25s all ease-in-out;
-            &:hover{
+
+            &:hover {
                 scale: 1.125;
             }
         }

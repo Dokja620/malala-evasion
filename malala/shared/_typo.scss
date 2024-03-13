@@ -54,6 +54,8 @@ h4 {
     font-family: 'titre';
     text-transform: initial;
     text-shadow: #000 0px 0px 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
 }
@@ -63,6 +65,8 @@ h5 {
     text-transform: initial;
     font-size: clamp(3.5em, 5vw + 1em, 5em);
     text-shadow: 1px 1px 2px $shadow, 1px 1px 4px $shadow, 1px 1px 2px $shadow;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
 }
 

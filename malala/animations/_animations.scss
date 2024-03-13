@@ -62,16 +62,30 @@ section {
  * ----------------------------------------
  */
 
-@keyframes the-popup {
-    from{
+@-webkit-keyframes the-popup {
+    from {
         transform: translateX(-10%);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: translateX(-50%);
         opacity: 1;
     }
 }
+
+@keyframes the-popup {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
 /*
  * ----------------------------------------
  * animation tilt-in-left
@@ -79,33 +93,33 @@ section {
  */
 @-webkit-keyframes tilt-in-left-1 {
     0% {
-        -webkit-transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
         transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
         opacity: 0;
-        filter: blur(5px);
+        -webkit-filter: blur(5px);
+                filter: blur(5px);
     }
 
     100% {
-        -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
         transform: rotateX(0deg) translateX(0) skewX(0deg);
         opacity: 1;
-        filter: blur(0);
+        -webkit-filter: blur(0);
+                filter: blur(0);
     }
 }
 
 @keyframes tilt-in-left-1 {
     0% {
-        -webkit-transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
         transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
         opacity: 0;
-        filter: blur(5px);
+        -webkit-filter: blur(5px);
+                filter: blur(5px);
     }
 
     100% {
-        -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
         transform: rotateX(0deg) translateX(0) skewX(0deg);
         opacity: 1;
-        filter: blur(0);
+        -webkit-filter: blur(0);
+                filter: blur(0);
     }
 }
 
@@ -117,7 +131,9 @@ section {
 
 .checkbox-wrapper-4 .cbx {
     -webkit-user-select: none;
-    user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
     cursor: pointer;
     border-radius: 6px;
     overflow: hidden;
@@ -183,7 +199,8 @@ section {
 .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
     background: $secondary;
     border-color: #fff;
-    animation: wave-4 0.4s ease;
+    -webkit-animation: wave-4 0.4s ease;
+            animation: wave-4 0.4s ease;
 }
 
 .checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
@@ -195,7 +212,10 @@ section {
     width: 0;
     height: 0;
     pointer-events: none;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 @media screen and (max-width: 640px) {
@@ -205,19 +225,7 @@ section {
     }
 }
 
-@-moz-keyframes wave-4 {
-    50% {
-        transform: scale(0.9);
-    }
-}
-
 @-webkit-keyframes wave-4 {
-    50% {
-        transform: scale(0.9);
-    }
-}
-
-@-o-keyframes wave-4 {
     50% {
         transform: scale(0.9);
     }

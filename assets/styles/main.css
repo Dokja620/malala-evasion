@@ -52,6 +52,8 @@ h4 {
   font-family: "titre";
   text-transform: initial;
   text-shadow: #000 0px 0px 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
 }
@@ -61,6 +63,8 @@ h5 {
   text-transform: initial;
   font-size: clamp(3.5em, 5vw + 1em, 5em);
   text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -124,6 +128,7 @@ nav .logo {
   cursor: pointer;
 }
 nav .logo img {
+  -o-object-fit: cover;
   object-fit: cover;
   transition: 0.25s all ease-in-out;
 }
@@ -184,6 +189,8 @@ footer .reach-us {
   margin: 15px 0 30px 0;
 }
 footer .soc {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   cursor: pointer;
 }
@@ -278,7 +285,10 @@ footer span:hover::before {
 #choice {
   margin-top: 15%;
   background: url(../imgs/offers/007.png) bottom left/auto 100% no-repeat, url(../imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat, linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.862745098), transparent);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
 }
 #choice .container {
@@ -344,6 +354,8 @@ form h2 {
   left: 50%;
   transform: translateX(-50%);
   width: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -415,6 +427,8 @@ form h2 {
   padding: 0.4em;
   color: #fff;
   border-radius: 7px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   margin: 15px auto;
   text-shadow: 0px 0px 5px var(--clr-primary);
@@ -461,6 +475,7 @@ form h2 {
   box-shadow: #38b6ff 0px 0px 5px, #38b6ff 0px 0px 10px, #38b6ff 0px 0px 15px, #38b6ff 0px 0px 20px, #38b6ff 0px 0px 25px, #38b6ff 0px 0px 30px, #38b6ff 0px 0px 50px;
   width: 40ch;
   text-align: center;
+  -webkit-animation: the-popup 0.25s both;
   animation: the-popup 0.25s both;
 }
 .popup p {
@@ -471,6 +486,8 @@ form h2 {
   padding: 5px 15px;
   margin: 5px auto;
   border: 2px solid #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   border-radius: 20px;
   cursor: pointer;
@@ -488,6 +505,8 @@ form h2 {
   font-family: "sub";
   text-align: center;
   font-size: 1em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
   line-height: 25px;
@@ -557,12 +576,15 @@ form h2 {
 }
 .places .img:hover > img {
   scale: 1.1;
+  -webkit-filter: blur(0px);
   filter: blur(0px);
 }
 .places .img img {
+  -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
   transition: 0.25s all ease-in-out;
+  -webkit-filter: blur(0.5px);
   filter: blur(0.5px);
 }
 .places p {
@@ -574,6 +596,8 @@ form h2 {
 }
 
 .book {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   position: absolute;
   bottom: -25px;
@@ -841,6 +865,8 @@ form h2 {
 }
 
 .navigation {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 .navigation span {
@@ -1051,6 +1077,16 @@ section {
  * animation popup apparition
  * ----------------------------------------
  */
+@-webkit-keyframes the-popup {
+  from {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
 @keyframes the-popup {
   from {
     transform: translateX(-10%);
@@ -1068,29 +1104,29 @@ section {
  */
 @-webkit-keyframes tilt-in-left-1 {
   0% {
-    -webkit-transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
     transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
     opacity: 0;
+    -webkit-filter: blur(5px);
     filter: blur(5px);
   }
   100% {
-    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
     transform: rotateX(0deg) translateX(0) skewX(0deg);
     opacity: 1;
+    -webkit-filter: blur(0);
     filter: blur(0);
   }
 }
 @keyframes tilt-in-left-1 {
   0% {
-    -webkit-transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
     transform: rotateX(-30deg) translateX(-150px) skewX(-10deg);
     opacity: 0;
+    -webkit-filter: blur(5px);
     filter: blur(5px);
   }
   100% {
-    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
     transform: rotateX(0deg) translateX(0) skewX(0deg);
     opacity: 1;
+    -webkit-filter: blur(0);
     filter: blur(0);
   }
 }
@@ -1100,6 +1136,8 @@ section {
 
 .checkbox-wrapper-4 .cbx {
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border-radius: 6px;
@@ -1166,6 +1204,7 @@ section {
 .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
   background: #38b6ff;
   border-color: #fff;
+  -webkit-animation: wave-4 0.4s ease;
   animation: wave-4 0.4s ease;
 }
 
@@ -1178,6 +1217,9 @@ section {
   width: 0;
   height: 0;
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1187,17 +1229,7 @@ section {
     display: inline-block;
   }
 }
-@-moz-keyframes wave-4 {
-  50% {
-    transform: scale(0.9);
-  }
-}
 @-webkit-keyframes wave-4 {
-  50% {
-    transform: scale(0.9);
-  }
-}
-@-o-keyframes wave-4 {
   50% {
     transform: scale(0.9);
   }
@@ -1309,6 +1341,8 @@ section {
   .includ .price {
     width: 50%;
     margin-bottom: 20px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .reserves {
@@ -1367,6 +1401,7 @@ section {
     min-width: 200px;
     text-align: center;
     background: rgba(18, 18, 18, 0.4);
+    -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     box-shadow: -2px 0px 5px rgba(18, 18, 18, 0.6156862745);
   }
@@ -1401,6 +1436,8 @@ section {
   .includ .price {
     width: 100%;
     margin-bottom: 20px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .reserves {

@@ -13,6 +13,7 @@
     h1 {
         @include center-absolute(-100px);
     }
+
     div {
         @include fields($base-border-radius-lg);
         position: relative;
@@ -24,6 +25,7 @@
 .malala {
     padding: 3em 2em 2em 2em;
     margin: 0 15px;
+
     img {
         position: absolute;
         right: -50px;
@@ -42,6 +44,7 @@
     text-shadow: 2px 2px 1px $shadow;
     padding: 1.5em 3em;
     margin: 1rem 15px 0 15px;
+
     img {
         position: absolute;
         top: -25px;
@@ -55,7 +58,10 @@
     background: url(../imgs/offers/007.png) bottom left/auto 100% no-repeat,
         url(../imgs/offers/001.png) top right/clamp(350px, 50vw, 700px) no-repeat,
         linear-gradient(to bottom, transparent, #ffffffdc, transparent);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
 
     .container {
@@ -74,13 +80,16 @@
     max-width: 250px;
     min-height: 350px;
     box-shadow: #000 0px 2px 15px;
+
     h2 {
         @include center-absolute(-12px);
         font-size: 1.2em;
     }
-    p{
+
+    p {
         margin: $base-margin;
     }
+
     img {
         margin-top: 1em;
         height: 150px;
