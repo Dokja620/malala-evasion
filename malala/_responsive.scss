@@ -21,6 +21,31 @@
     .infos-excu {
         align-items: center;
     }
+
+    // absolute flowers
+    .flowers {
+        img {
+            position: absolute;
+            width: 125px;
+            top: -65px;
+        }
+
+        .flo-1 {
+            left: 30px;
+        }
+
+        .flo-2 {
+            left: -15px;
+        }
+
+        .flo-3 {
+            display: none;
+        }
+
+        .flo-4 {
+            display: none;
+        }
+    }
 }
 
 /*lg*/
@@ -112,6 +137,8 @@
         .price {
             width: 50%;
             margin-bottom: 20px;
+            height: -webkit-max-content;
+            height: -moz-max-content;
             height: max-content;
         }
     }
@@ -135,7 +162,8 @@
         max-width: 90vw;
         height: 255px;
         background: red;
-        .bg-illu{
+
+        .bg-illu {
             min-width: 100%;
         }
     }
@@ -157,6 +185,7 @@
     }
 
     nav {
+
         // display: none;
         // nav links
         ul {
@@ -169,11 +198,24 @@
             width: 25%;
             min-width: 200px;
             text-align: center;
-            background: rgba($shadow, 1);
-            backdrop-filter: blur(3px);
+            background: rgba($shadow, 0.4);
+            -webkit-backdrop-filter: blur(3px);
+                    backdrop-filter: blur(3px);
             box-shadow: -2px 0px 5px $shadow;
         }
     }
+
+    // Bivouac nosy iranja
+    .iranja-bivouac {
+        .informa {
+            bottom: 0px;
+        }
+
+        .text {
+            margin: 0 29px;
+        }
+    }
+
 }
 
 /*sm*/
@@ -209,6 +251,8 @@
     .includ .price {
         width: 100%;
         margin-bottom: 20px;
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;
     }
 
@@ -223,6 +267,11 @@
         .lemur {
             display: none;
         }
+    }
+
+    // circuit
+    .program {
+        margin: 75px 20px 20px 20px;
     }
 }
 
@@ -244,11 +293,12 @@
         width: 90%;
         margin: 0 auto;
     }
+
     .boxs {
         overflow-x: hidden;
         font-size: .9em;
     }
-    
+
     .quad {
         span {
             @include button-secondary();
@@ -271,6 +321,7 @@
             letter-spacing: 0px;
         }
     }
+
     .politique {
         p {
             letter-spacing: 0px;

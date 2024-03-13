@@ -13,10 +13,11 @@
         font-family: 'titre';
         text-transform: initial;
         font-size: 2.5em;
-        color: $secondary;
+        color: $primary;
         width: max-content;
         margin: 0 auto;
-        background: linear-gradient(to right, transparent, #ffffff83, transparent);
+        padding: 0 15px;
+        background: linear-gradient(to right, transparent, #00000083, transparent);
         backdrop-filter: blur(2px);
     }
 
@@ -28,6 +29,27 @@
         font-size: 1.1em;
         text-shadow: 0px 2px 2px $secondary, 0px 2px 5px $secondary;
         cursor: pointer;
+        position: relative;
+        z-index: 5;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            width: 75%;
+            height: 2px;
+            border-radius: 2px;
+            background: $primary;
+            box-shadow: 0px 2px 2px $secondary, 0px 2px 5px $secondary;
+            transition: .25s all ease-in-out;
+        }
+
+        &:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
     }
 }
 
@@ -35,6 +57,7 @@
 .infos-excu {
     display: flex;
     gap: $base-padding-lg;
+    margin-top: 75px;
     margin-bottom: 30px;
 }
 
@@ -70,22 +93,23 @@
     border-radius: 20px 20px 0 0;
     border: 3px solid #fff;
     box-shadow: 0px 2px 5px $shadow, 0px 2px 10px $shadow, 0px 2px 15px $shadow;
+    background: #ffffff76;
 
     img {
-        min-height: 100%;
         min-width: 100%;
+        height: 100%;
     }
 }
 
 .trip {
     position: relative;
-    @include fields();
+    @include fields($base-border-radius);
     margin: 25px 0;
     padding: $base-padding-lg;
-    border-radius: $base-border-radius;
 
     div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin: 0 0 5px 0;
     }
@@ -108,4 +132,53 @@
 
 .reserve-a {
     @include button-primary();
+}
+
+// Bivouac nosy iranja
+.iranja-bivouac {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+
+    .text {
+        @include fields($base-border-radius);
+        max-width: 75ch;
+        padding: $base-padding-lg;
+        height: max-content;
+    }
+}
+
+.bivouac-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: $base-border-radius;
+    width: 350px;
+    background: #ffffffbb;
+
+    &:hover>.informa {
+        bottom: 0px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .informa {
+        background: #000000a6;
+        box-shadow: 0px -2px 2px $shadow;
+        padding: 5px 0;
+        max-width: 100%;
+        width: 100%;
+        @include center-absolute-bottom(-90px);
+        transition: .25s all ease-in-out;
+
+        p {
+            text-align: center;
+        }
+    }
 }

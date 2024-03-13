@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation</title>
+    <title>Malala Evasion - Réservation</title>
     <link rel="stylesheet" href="../assets/styles/main.css">
     <script src="../assets/scripts/site.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="../assets/scripts/reservation.js" defer></script>
+    <link rel="shortcut icon" href="../favico.png" type="image/x-icon">
 </head>
 <body>
 <header id="top">
@@ -20,7 +23,7 @@
                 <li><a href="../pages/excursion.html">Excursion</a></li>
                 <li><a href="../pages/tour.html">Tour de l'îles</a></li>
                 <li><a href="../pages/circuit.html">Circuit-Nord</a></li>
-                <li><a href="#">Réservation</a></li>
+                <li><a href="#" class="active">Réservation</a></li>
             </ul>
         </div>
         <div class="menu-burger">
@@ -33,26 +36,35 @@
 
 <main>
 <section id="reservation" class="container">
+    <div class="popup" style="display: none;">
+        <h3>Merci d'avoir choisi Malala Evasion</h3>
+        <p>
+            Un email vous sera de suite envoyé!
+        </p>
+        <div class="btn" id="confirmation-btn">
+            D'accord
+        </div>
+    </div>
     <h1>Réservation</h1>
-    <form>
+    <form id="contact-form">
         <div class="client">
             <div class="infos">
                 <h2>Informations du client</h2>
                 <div>
                     <label>Nom :</label>
-                    <input type="text" name="last-name">
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div>
                     <label>Prénoms :</label>
-                    <input type="text" name="first-name">
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
                 <div>
                     <label>Email :</label>
-                    <input type="email" name="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label>Numéro :</label>
-                    <input type="text" name="number">
+                    <input type="text" id="number" name="number" required>
                 </div>
             </div>
             
@@ -60,43 +72,76 @@
                 <h2>Informations de l'excursion</h2>
                 <div>
                     <label>Nombre de personnes :</label>
-                    <input type="number" name="client-number">
+                    <input type="number" id="client-number" name="client-number" min="0" max="20" placeholder="00" required>
                 </div>
                 <div>
                     <label>Choix de l'excursion :</label>
                     <span class="chos">
-                        <select name="island-choice" id="pick-one">
+                        <select name="island-choice" id="pick-one" required> // TODO style options value 
                             <option value="">Faites votre choix</option>
                             <option value="Nosy komba">Nosy komba</option>
                             <option value="Nosy Tanikely">Nosy Tanikely</option>
                             <option value="Nosy Iranja">Nosy Iranja</option>
                             <option value="Nosy Sakatia">Nosy Sakatia</option>
                             <option value="Lokobe">Lokobe</option>
+                            <option value="tour de l'ile">Tour de l'île</option>
+                            <option value="Circuit Nord">Circuit-Nord</option>
                         </select>
-                        <input type="text" name="price" placeholder="00.00€">
+                        <input type="text" name="price" placeholder="00.00€" readonly>
                     </span>
                 </div>
+                
+                <span class="optional">
+                    <div id="optional-1" class="checkbox-wrapper-4">
+                        <input class="inp-cbx" id="quad" type="checkbox">
+                        <label class="cbx" for="quad"><span>
+                        <svg width="12px" height="10px">
+                          <use xlink:href="#check-4"></use>
+                        </svg></span><span>Location quad</span></label>
+                        <svg class="inline-svg">
+                          <symbol id="check-4" viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </symbol>
+                        </svg>
+                    </div>
+                    <div id="optional-2" class="checkbox-wrapper-4">
+                        <input class="inp-cbx" id="bivouac" type="checkbox">
+                        <label class="cbx" for="bivouac"><span>
+                        <svg width="12px" height="10px">
+                          <use xlink:href="#check-4"></use>
+                        </svg></span><span>Nuité Bivouac</span></label>
+                        <svg class="inline-svg">
+                          <symbol id="check-4" viewBox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </symbol>
+                        </svg>
+                    </div>
+                </span>
+                
                 <div>
                     <label>Date de l'excursion :</label>
-                    <input type="date" name="island">
+                    <input type="date" name="excursion-date" required>
                 </div>
+
     
                 <div>
                     <p>Mode de paiement</p>
                     <div class="choice">
-                        <span><input type="radio" name="payment" id="bank"><label for="bank">Par carte bancaire</label></span>
-                        <span><input type="radio" name="payment" id="mobile"><label for="mobile">Mobile money</label></span>
-                        <span><input type="radio" name="payment" id="here"><label for="here">Sur place</label></span>
+                        <span><input type="radio" name="payment" id="bank" value="Par carte bancaire" checked><label for="bank">Par carte bancaire</label></span>
+                        <span><input type="radio" name="payment" id="mobile" value="Mobile money"><label for="mobile">Mobile money</label></span>
+                        <span><input type="radio" name="payment" id="here" value="Sur place"><label for="here">Sur place</label></span>
                     </div>
-                </div>
+                    <input type="hidden" name="payment_method" id="payment_method">
+
+                </div>                
                 
             </div>
         </div>
         
-        <!-- send button -->
-        <div class="politique">
+        <!-- user -->
+        <!-- <div class="politique">
             <p>politique de confidentialité</p>
-        </div>
+        </div> -->
 
         <!-- send button -->
         <div class="send">
