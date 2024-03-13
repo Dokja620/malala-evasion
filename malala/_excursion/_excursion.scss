@@ -19,7 +19,7 @@
         background: linear-gradient(to right, transparent, #00000083, transparent);
         backdrop-filter: blur(2px);
     }
-    // TODO add hover and active effects
+
     button {
         background: none;
         border: none;
@@ -28,7 +28,25 @@
         font-size: 1.1em;
         text-shadow: 0px 2px 2px $secondary, 0px 2px 5px $secondary;
         cursor: pointer;
+        position: relative;
         z-index: 5;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            width: 75%;
+            height: 2px;
+            border-radius: 2px;
+            background: $primary;
+            box-shadow: 0px 2px 2px $secondary, 0px 2px 5px $secondary;
+            transition: .25s all ease-in-out;
+        }
+        &:hover::after{
+            transform: translateX(-50%) scaleX(1);
+        }
     }
 }
 
@@ -63,7 +81,7 @@
     }
 }
 
-// slider // TODO all images fits to the things search object fit cover
+// slider
 .swiper {
     width: 40vw;
     min-width: 300px;
@@ -74,19 +92,20 @@
     box-shadow: 0px 2px 5px $shadow, 0px 2px 10px $shadow, 0px 2px 15px $shadow;
     background: #ffffff76;
     img {
-        width: 100%;
+        min-width: 100%;
+        height: 100%;
     }
 }
 
 .trip {
     position: relative;
-    @include fields();
+    @include fields($base-border-radius);
     margin: 25px 0;
     padding: $base-padding-lg;
-    border-radius: $base-border-radius;
 
     div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin: 0 0 5px 0;
     }
@@ -109,4 +128,48 @@
 
 .reserve-a {
     @include button-primary();
+}
+
+// Bivouac nosy iranja
+.iranja-bivouac{
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    .text{
+        @include fields($base-border-radius);
+        max-width: 75ch;
+        padding: $base-padding-lg;
+        height: max-content;
+    }
+}
+
+.bivouac-img{
+    position: relative;
+    overflow: hidden;
+    border-radius: $base-border-radius;
+    width: 350px;
+    background: #ffffffbb;
+    &:hover > .informa{
+        bottom: 0px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .informa{
+        background: #000000a6;
+        box-shadow: 0px -2px 2px $shadow;
+        padding: 5px 0;
+        max-width: 100%;
+        width: 100%;
+        @include center-absolute-bottom(-90px);
+        transition: .25s all ease-in-out;
+        p{
+            text-align: center;
+        }
+    }
 }

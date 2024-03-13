@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "../assets/imgs/Nosy/Komba/kom-006.webp",
             "../assets/imgs/Nosy/Komba/kom-007.webp",
             "../assets/imgs/Nosy/Komba/kom-008.webp",
-            "../assets/imgs/Nosy/Komba/kom-009.webp", // TODO not rendered maybe missing file
+            "../assets/imgs/Nosy/Komba/kom-009.webp",
             "../assets/imgs/Nosy/Komba/kom-010.webp"
         ],
         "Nosy Tanikely": [
@@ -126,5 +126,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("description").textContent = descriptions[buttonText];
         document.getElementById("aminities").textContent = amenities[buttonText];
         document.getElementById("price").textContent = prices[buttonText];
+    
+        // Show or hide the iranja-bivouac section based on the selected island
+        if (buttonText === "Nosy Iranja") {
+            document.querySelector(".iranja-bivouac").style.display = "flex";
+        } else {
+            document.querySelector(".iranja-bivouac").style.display = "none";
+        }
     }
 });
