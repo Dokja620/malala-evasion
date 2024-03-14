@@ -23,12 +23,12 @@
             }
 
             const basePrices = {
-                "Nosy komba": 20,
-                "Nosy Tanikely": 30,
-                "Nosy Iranja": 15,
-                "Nosy Sakatia": 50,
-                "Lokobe": 60,
-                "tour de l'ile": 40,
+                "Nosy komba": 55,
+                "Nosy Tanikely": 55,
+                "Nosy Iranja": 55,
+                "Nosy Sakatia": 55,
+                "Lokobe": 55,
+                "tour de l'ile": 65,
                 "Circuit Nord": 100
             };
 
@@ -37,7 +37,7 @@
             if (selectedOption === "Nosy Iranja" && optional2Checkbox.checked) {
                 price += 100; // Add bivouac price
             } else if (selectedOption === "tour de l'ile" && optional1Checkbox.checked) {
-                price += 50; // Add quad price
+                price += 60; // Add quad price
             }
 
             const clientNumber = Math.min(Math.max(parseInt(clientNumberInput.value) || 0, 0), 20);

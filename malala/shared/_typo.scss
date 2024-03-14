@@ -28,7 +28,6 @@
 h1 {
     font-family: 'Titre';
     font-size: clamp(2em, 10vw + 1em, 7em);
-    text-transform: initial;
     text-shadow: 4px 4px 0px $shadow;
     text-align: center;
 }
@@ -52,7 +51,6 @@ h4 {
     font-size: clamp(2.5em, 10vw + 1em, 5em);
     color: $primary;
     font-family: 'titre';
-    text-transform: initial;
     text-shadow: #000 0px 0px 5px;
     width: -webkit-max-content;
     width: -moz-max-content;
