@@ -108,11 +108,11 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         const amenities = {
-            "Nosy Komba": "Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide",
-            "Nosy Tanikely": "Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide",
-            "Nosy Iranja": "Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide",
-            "Nosy Sakatia": "Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide - Equipement Snorkeling",
-            "Lokobe": "Transfert - Eau minérale - Entrée parcs - Déjeuner - Guide"
+            "Nosy Komba": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
+            "Nosy Tanikely": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
+            "Nosy Iranja": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
+            "Nosy Sakatia": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide - Equipement Snorkeling",
+            "Lokobe": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Entrée parc - Déjeuner - Guide"
         };
 
         const prices = {

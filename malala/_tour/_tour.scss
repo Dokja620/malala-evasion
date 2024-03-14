@@ -145,13 +145,33 @@ h2 {
 
 // Quad proposition
 .quad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: justify;
     max-width: 800px;
     border: 3px solid rgba($secondary, .6);
     padding: $base-padding-lg;
     margin: $base-margin 20px 35px 20px;
     @include fields($base-border-radius);
-
+    p{
+        max-width: 29ch;
+    }
     span {
         @include button-secondary();
+    }
+    .separation{
+        max-height: 180px;
+    }
+    .quad-img{
+        width: 300px;
+        height: 180px;
+        overflow: hidden;
+        border-radius: $base-border-radius;
+        border: 3px solid $primary;
+        img{
+            width: 100%;
+            min-height: 100%;
+        }
     }
 }
