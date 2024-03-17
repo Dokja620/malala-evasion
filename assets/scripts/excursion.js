@@ -119,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
             "Nosy Komba": "55€ / personne (Minimum 3 personnnes)",
             "Nosy Tanikely": "55€ / personne (Minimum 3 personnnes)",
             "Nosy Iranja": "55€ / personne (Minimum 3 personnnes)",
-            "Nosy Sakatia": "55€ / personne (Minimum 3 personnnes)",
-            "Lokobe": "55€ / personne (Minimum 3 personnnes)"
+            "Nosy Sakatia": "35€ / personne (Minimum 3 personnnes)",
+            "Lokobe": "50€ / personne (Minimum 3 personnnes)"
         };
 
         document.getElementById("description").textContent = descriptions[buttonText];
