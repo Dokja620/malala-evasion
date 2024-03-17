@@ -59,7 +59,7 @@
         
             const form = document.getElementById('contact-form');
         
-            emailjs.sendForm('service_0b6kg78', 'template_21q20uk', form)
+            emailjs.sendForm('service_9doetb9', 'template_ori2jxv', form)
             .then(
                 () => {
                     console.log('SUCCESS!');
@@ -98,6 +98,6 @@
 
     // Initialize EmailJS with your public key
     emailjs.init({
-        publicKey: "uzZPcXhAKZZ3GQpzM",
+        publicKey: "xuXsm2F6jTKUdHcRu",
     });
 })();
