@@ -48,11 +48,12 @@ h3 {
 }
 
 h4,
+.titree,
 a {
     font-family: 'sub';
 }
 
-h4 {
+h4, .titree {
     font-size: clamp(2.5em, 10vw + 1em, 5em);
     color: $primary;
     font-family: 'titre';
