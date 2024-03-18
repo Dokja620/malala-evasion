@@ -26,9 +26,13 @@ nav {
     // logo
     .logo {
         height: 50px;
+        width: auto;
+        aspect-ratio: 1/1;
         cursor: pointer;
-
+        
         img {
+            max-height: 50px;
+            width: auto;
             -o-object-fit: cover;
                object-fit: cover;
             transition: .25s all ease-in-out;
