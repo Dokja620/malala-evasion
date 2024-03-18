@@ -46,11 +46,12 @@ h3 {
 }
 
 h4,
+.titree,
 a {
   font-family: "sub";
 }
 
-h4 {
+h4, .titree {
   font-size: clamp(2.5em, 10vw + 1em, 5em);
   color: #fff;
   font-family: "titre";
@@ -1310,7 +1311,7 @@ section {
     top: -80px;
   }
   #choice {
-    background: url(../imgs/offers/007.png) bottom center/auto 100% no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
+    background: url(../imgs/offers/007.webp) bottom center/auto 100% no-repeat, linear-gradient(to bottom, transparent, #fff, transparent);
   }
   .infos-excu {
     display: flex;
