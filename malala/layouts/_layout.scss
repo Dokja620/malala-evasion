@@ -5,6 +5,16 @@ body {
     height: 100vh;
     overflow-x: hidden;
     font-size: 18px;
+    &::-webkit-scrollbar{
+        width: .25em;
+    }
+    &::-webkit-scrollbar-track{
+        background: #fff;
+
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $secondary;
+    }
 }
 
 section {
