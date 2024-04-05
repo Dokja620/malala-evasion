@@ -100,4 +100,13 @@
     emailjs.init({
         publicKey: "xuXsm2F6jTKUdHcRu",
     });
+    emailjs.sendForm('service_9doetb9', 'template_ori2jxv', form)
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    // Display the popup
+                    document.querySelector('.popup').style.display = 'block';
+                },
+                error => console.log('FAILED...', error)
+            );
 })();
