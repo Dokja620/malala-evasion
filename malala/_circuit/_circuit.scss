@@ -75,7 +75,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-    justify-content: space-evenly;
+    justify-content: space-around;
     gap: 32px;
     margin: $base-margin 0;
     span{
@@ -108,7 +108,7 @@
     h4{
         position: absolute;
         bottom: 16px;
-        left: 50%;
+        left: 55%;
         transform: translateX(-50%);
         width: 100%;
         z-index: 3;
