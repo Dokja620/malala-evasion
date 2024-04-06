@@ -271,7 +271,17 @@
 
     // circuit
     .program {
-        margin: 75px 20px 20px 20px;
+        margin: 25px 20px 20px 20px;
+        padding: $base-padding;
+    }
+    .circuit{
+        .text{
+            line-height: 20px;
+        }
+    }
+    .intro-c, .prologue{
+        line-height: 22px;
+        width: 100%;
     }
 }
 
@@ -280,7 +290,9 @@
     .container {
         width: 100%;
     }
-
+    body{
+        font-size: 16px;
+    }
     //Introduction - Homepage
     #home .malala {
         h1 {
