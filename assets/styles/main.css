@@ -600,7 +600,7 @@ form h2 {
 .triping {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 32px;
   margin: 0.75rem 0;
 }
@@ -634,7 +634,7 @@ form h2 {
 .tit h4 {
   position: absolute;
   bottom: 16px;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
   width: 100%;
   z-index: 3;
@@ -1569,12 +1569,39 @@ section {
     margin: 25px 20px 20px 20px;
     padding: 0.75rem;
   }
+  .circuit {
+    width: clamp(200px, 75%, 350px);
+  }
   .circuit .text {
     line-height: 20px;
   }
   .intro-c, .prologue {
     line-height: 22px;
     width: 100%;
+  }
+  .tit {
+    position: relative;
+  }
+  .tit span {
+    position: absolute;
+    font-family: "sub-title";
+    color: hsla(0, 0%, 100%, 0.25);
+    font-size: 2.2em;
+    bottom: 6px;
+    left: 12px;
+    z-index: 3;
+  }
+  .tit h4 {
+    max-width: 15ch;
+  }
+  .tit h4.double {
+    bottom: 5px;
+  }
+  .included {
+    justify-content: center;
+  }
+  .included .book {
+    order: 3;
   }
 }
 /*xs*/
