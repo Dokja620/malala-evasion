@@ -37,12 +37,12 @@ h1 {
 
 h2 {
   font-family: "sub-title";
-  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
 }
 
 h3 {
   font-family: "bold-sub-title";
-  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
 }
 
 h4,
@@ -66,7 +66,7 @@ h5 {
   font-family: "titre";
   text-transform: initial;
   font-size: clamp(3.5em, 5vw + 1em, 5em);
-  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -75,7 +75,7 @@ h5 {
 p {
   font-family: "text";
   text-align: justify;
-  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745);
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 6px rgba(18, 18, 18, 0.6156862745), 1px 1px 8px rgba(18, 18, 18, 0.6156862745), 1px 1px 10px rgba(18, 18, 18, 0.6156862745);
 }
 
 /* reset */
@@ -326,7 +326,7 @@ footer span:hover::before {
   max-width: 250px;
   min-height: 350px;
   box-shadow: #000 0px 2px 15px;
-  padding-bottom: 4px;
+  padding: 1.5rem 0 4px;
 }
 .div h2 {
   position: absolute;
@@ -343,6 +343,21 @@ footer span:hover::before {
   margin-top: 1em;
   height: 150px;
   width: 100%;
+}
+
+.prev {
+  width: 100%;
+  height: 150px;
+  background: red;
+}
+.prev.ex {
+  background: url(../../assets/imgs/home/Offers/nosy-komba.webp) center/cover no-repeat;
+}
+.prev.il {
+  background: url(../../assets/imgs/home/Offers/mont-passot.webp) center/cover no-repeat;
+}
+.prev.ci {
+  background: url(../../assets/imgs/home/Offers/mer-emeraude.webp) center/cover no-repeat;
 }
 
 /* reservation */
@@ -469,6 +484,7 @@ form h2 {
   background: #38b6ff;
   padding: 0.5em 1.1em;
   border-radius: 35px;
+  text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
   box-shadow: -4px 4px 0px #fff;
   cursor: pointer;
@@ -537,9 +553,13 @@ form h2 {
   border-radius: 7px;
 }
 
-.intro {
-  max-width: 600px;
+.intro-c, .prologue {
   margin: 0.75rem auto;
+  width: 90%;
+  line-height: 30px;
+}
+.intro-c p, .prologue p {
+  text-shadow: 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 4px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 2px rgba(18, 18, 18, 0.6156862745), 1px 1px 5px rgba(18, 18, 18, 0.6156862745);
 }
 
 .program {
@@ -555,11 +575,6 @@ form h2 {
   margin: 20px;
 }
 .program h3 {
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
   font-size: 1.3em;
   z-index: 2;
 }
@@ -584,7 +599,7 @@ form h2 {
 
 .triping {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, calc(28.5714285714% - 15px)));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: space-evenly;
   gap: 32px;
   margin: 0.75rem 0;
@@ -597,6 +612,11 @@ form h2 {
   background: hsla(0, 0%, 10%, 0.5);
   padding: 0.75rem;
   border-radius: 20px;
+  width: clamp(300px, 75%, 350px);
+  margin: 0 auto;
+}
+.circuit .text {
+  line-height: 27px;
 }
 
 .tit {
@@ -605,10 +625,10 @@ form h2 {
 .tit span {
   position: absolute;
   font-family: "sub-title";
-  color: rgba(255, 255, 255, 0.3333333333);
+  color: hsla(0, 0%, 100%, 0.25);
   font-size: 2.2em;
-  bottom: 4px;
-  left: 15px;
+  bottom: 6px;
+  left: 12px;
   z-index: 3;
 }
 .tit h4 {
@@ -624,7 +644,7 @@ form h2 {
 .places {
   width: 100%;
   height: 200px;
-  margin: 0.75rem 0;
+  margin: 0 0 0.75rem;
   overflow: hidden;
   border: 4px solid hsla(202, 100%, 9%, 0.39);
   border-radius: 20px;
@@ -654,17 +674,14 @@ form h2 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+  text-transform: uppercase;
   width: max-content;
   font-family: "text";
   font-size: 1.1em;
   background: #38b6ff;
   padding: 0.5em 1.1em;
   border-radius: 35px;
+  text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
   box-shadow: -4px 4px 0px #fff;
   cursor: pointer;
@@ -679,6 +696,7 @@ form h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   text-align: center;
   margin: 25px 20px 0 20px;
 }
@@ -845,6 +863,7 @@ form h2 {
   background: #38b6ff;
   padding: 0.5em 1.1em;
   border-radius: 35px;
+  text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
   box-shadow: -4px 4px 0px #fff;
   cursor: pointer;
@@ -1001,6 +1020,7 @@ h2 {
   background: #38b6ff;
   padding: 0.5em 1.1em;
   border-radius: 35px;
+  text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
   box-shadow: -4px 4px 0px #fff;
   cursor: pointer;
@@ -1430,6 +1450,7 @@ section {
     background: #38b6ff;
     padding: 0.5em 1.1em;
     border-radius: 35px;
+    text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
     box-shadow: -4px 4px 0px #fff;
     cursor: pointer;
@@ -1525,6 +1546,7 @@ section {
     background: #38b6ff;
     padding: 0.5em 1.1em;
     border-radius: 35px;
+    text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
     box-shadow: -4px 4px 0px #fff;
     cursor: pointer;
@@ -1544,13 +1566,24 @@ section {
     display: none;
   }
   .program {
-    margin: 75px 20px 20px 20px;
+    margin: 25px 20px 20px 20px;
+    padding: 0.75rem;
+  }
+  .circuit .text {
+    line-height: 20px;
+  }
+  .intro-c, .prologue {
+    line-height: 22px;
+    width: 100%;
   }
 }
 /*xs*/
 @media (max-width: 475px) {
   .container {
     width: 100%;
+  }
+  body {
+    font-size: 16px;
   }
   #home .malala h1 {
     top: -30px;

@@ -29,6 +29,7 @@
     background: $secondary;
     padding: .5em 1.1em;
     border-radius: 35px;
+    text-shadow: 0px 0px 2px $shadow, 0px 0px 4px $shadow, 0px 0px 4px $shadow, 0px 0px 4px $shadow, 0px 0px 8px $shadow, 0px 0px 12px $shadow;
     border: 3px solid $primary;
     box-shadow: -4px 4px 0px $primary;
     cursor: pointer;

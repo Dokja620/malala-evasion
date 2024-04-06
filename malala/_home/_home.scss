@@ -80,7 +80,7 @@
     max-width: 250px;
     min-height: 350px;
     box-shadow: #000 0px 2px 15px;
-    padding-bottom: 4px;
+    padding: $base-padding-xl 0 4px;
     
     h2 {
         @include center-absolute(-12px);
@@ -95,5 +95,20 @@
         margin-top: 1em;
         height: 150px;
         width: 100%;
+    }
+}
+
+.prev{
+    width: 100%;
+    height: 150px;
+    background: red;
+    &.ex{
+        background: url(../../assets/imgs/home/Offers/nosy-komba.webp) center/cover no-repeat;
+    }
+    &.il{
+        background: url(../../assets/imgs/home/Offers/mont-passot.webp) center/cover no-repeat;
+    }
+    &.ci{
+        background: url(../../assets/imgs/home/Offers/mer-emeraude.webp) center/cover no-repeat;
     }
 }
