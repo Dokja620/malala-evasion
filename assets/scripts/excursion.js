@@ -108,8 +108,8 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         const amenities = {
-            "Nosy Komba": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
-            "Nosy Tanikely": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
+            "Nosy Komba": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide - Excursion Nosy Tanikely",
+            "Nosy Tanikely": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide - Excursion Nosy Komba",
             "Nosy Iranja": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide",
             "Nosy Sakatia": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Déjeuner - Guide - Equipement Snorkeling",
             "Lokobe": "Transfert (hôtel vers lieu d'embarquement) - Boisson avec ou sans alcool - Entrée parc - Déjeuner - Guide"

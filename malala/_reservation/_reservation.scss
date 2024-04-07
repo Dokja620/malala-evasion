@@ -1,6 +1,6 @@
 /* reservation */
 #reservation {
-    padding-top: 50px;
+    padding-top: 35px;
 }
 
 form {
@@ -43,7 +43,7 @@ form {
         label {
             font-family: 'sub';
             font-size: 1.1em;
-            margin: 10px 0;
+            margin: 10px 0 5px;
             text-shadow: 1px 1px 1px var(--clr-shadow);
         }
 
@@ -103,7 +103,7 @@ form {
 // payment choice
 .choice {
     input {
-        margin: 10px;
+        margin: 8px 5px;
     }
 }
 
@@ -152,10 +152,10 @@ form {
         $secondary 0px 0px 25px,
         $secondary 0px 0px 30px,
         $secondary 0px 0px 50px;
-    width: 40ch;
+    width: 35ch;
     text-align: center;
     -webkit-animation: the-popup .25s both;
-            animation: the-popup .25s both;
+    animation: the-popup .25s both;
 
     p {
         text-align: center;
@@ -164,17 +164,94 @@ form {
     .btn {
         font-family: 'sub';
         padding: 5px 15px;
-        margin: 5px auto;
+        margin: 24px auto 5px;
         border: 2px solid $primary;
         width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;
         border-radius: $base-border-radius;
         cursor: pointer;
-        transition: .25s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+        transition: .25s padding cubic-bezier(0.250, 0.460, 0.450, 0.940);
 
         &:hover {
-            padding: 5px 20px;
+            padding: 5px 24px;
         }
     }
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+        /* Initial state */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Zoom in */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to initial state */
+    }
+}
+
+/* Class to apply the animation */
+.zoom-effect {
+    animation: zoomInOut 0.5s ease forwards;
+    /* Adjust duration and easing as needed */
+}
+
+.load-message {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 10px solid;
+    border-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+    opacity: 1;
+}
+
+.fade-out {
+    animation: fadeOut 1s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.hidden {
+    display: none;
 }

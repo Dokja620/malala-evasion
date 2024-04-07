@@ -39,7 +39,7 @@
     <div class="popup" style="display: none;">
         <h3>Merci d'avoir choisi Malala Evasion</h3>
         <p>
-            Un email vous sera de suite envoyé!
+            On traitera votre revervation dans les plus bref delais.
         </p>
         <div class="btn" id="confirmation-btn">
             D'accord
@@ -68,6 +68,10 @@
                 </div>
             </div>
             
+            <div class="load-message hidden">
+                <span class="loader"></span>
+            </div>
+
             <div class="infos">
                 <h2>Informations de l'excursion</h2>
                 <div>
@@ -79,8 +83,7 @@
                     <span class="chos">
                         <select name="island-choice" id="pick-one" required> <!-- // TODO style options value  -->
                             <option value="">Faites votre choix</option>
-                            <option value="Nosy komba">Nosy komba</option>
-                            <option value="Nosy Tanikely">Nosy Tanikely</option>
+                            <option value="Nosy komba et Nosy Tanikely">Nosy komba et Nosy Tanikely</option>
                             <option value="Nosy Iranja">Nosy Iranja</option>
                             <option value="Nosy Sakatia">Nosy Sakatia</option>
                             <option value="Lokobe">Lokobe</option>
@@ -98,6 +101,11 @@
                         <svg width="12px" height="10px">
                           <use xlink:href="#check-4"></use>
                         </svg></span><span>Location quad (+60€/quad)</span></label>
+                        <!-- for emailjs -->
+                        <div style="display: none;">
+                          <input type="radio" id="option1" name="extra" value="+ Location quad (+60€/quad)">
+                          <label for="option1">Option 1</label>
+                        </div>
                         <svg class="inline-svg">
                           <symbol id="check-4" viewBox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -110,6 +118,11 @@
                         <svg width="12px" height="10px">
                           <use xlink:href="#check-4"></use>
                         </svg></span><span>Nuité Bivouac (+100€/2jours)</span></label>
+                        <!-- for emailjs -->
+                        <div style="display: none;">
+                            <input type="radio" id="option2" name="extra" value="+ Nuité Bivouac (+100€/2jours)">
+                            <label for="option2">Option 2</label>
+                        </div>
                         <svg class="inline-svg">
                           <symbol id="check-4" viewBox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
