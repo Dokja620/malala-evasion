@@ -94,7 +94,7 @@ p {
 
 /* body styles */
 body {
-  background: url(../../assets/imgs/secondary-bg.webp) center/cover no-repeat;
+  background: url(../../assets/imgs/secondary-bg-12.webp) center/cover no-repeat;
   background-attachment: fixed;
   height: 100vh;
   overflow-x: hidden;
@@ -362,7 +362,7 @@ footer span:hover::before {
 
 /* reservation */
 #reservation {
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 form .client {
@@ -405,7 +405,7 @@ form h2 {
 .infos div label {
   font-family: "sub";
   font-size: 1.1em;
-  margin: 10px 0;
+  margin: 10px 0 5px;
   text-shadow: 1px 1px 1px var(--clr-shadow);
 }
 .infos div input,
@@ -452,7 +452,7 @@ form h2 {
 }
 
 .choice input {
-  margin: 10px;
+  margin: 8px 5px;
 }
 
 .politique {
@@ -486,12 +486,12 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -4px 4px 0px #fff;
+  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
 }
 .send button:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
   padding: 0.5em 2em;
 }
 
@@ -507,7 +507,7 @@ form h2 {
   padding: 1.5rem;
   border-radius: 20px;
   box-shadow: #38b6ff 0px 0px 5px, #38b6ff 0px 0px 10px, #38b6ff 0px 0px 15px, #38b6ff 0px 0px 20px, #38b6ff 0px 0px 25px, #38b6ff 0px 0px 30px, #38b6ff 0px 0px 50px;
-  width: 40ch;
+  width: 35ch;
   text-align: center;
   -webkit-animation: the-popup 0.25s both;
   animation: the-popup 0.25s both;
@@ -518,17 +518,95 @@ form h2 {
 .popup .btn {
   font-family: "sub";
   padding: 5px 15px;
-  margin: 5px auto;
+  margin: 24px auto 5px;
   border: 2px solid #fff;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   border-radius: 20px;
   cursor: pointer;
-  transition: 0.25s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+  transition: 0.25s padding cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .popup .btn:hover {
-  padding: 5px 20px;
+  padding: 5px 24px;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+    /* Initial state */
+  }
+  50% {
+    transform: scale(1.1);
+    /* Zoom in */
+  }
+  100% {
+    transform: scale(1);
+    /* Return to initial state */
+  }
+}
+/* Class to apply the animation */
+.zoom-effect {
+  animation: zoomInOut 0.5s ease forwards;
+  /* Adjust duration and easing as needed */
+}
+
+.load-message {
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 10px solid;
+  border-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fade-in {
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+
+.fade-out {
+  animation: fadeOut 1s;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.hidden {
+  display: none;
 }
 
 /*Circuit-Nord / Fully responsive*/
@@ -683,12 +761,12 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -4px 4px 0px #fff;
+  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
 }
 .book:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
   padding: 0.5em 2em;
 }
 
@@ -817,7 +895,7 @@ form h2 {
   min-width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 .trip {
@@ -865,12 +943,12 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -4px 4px 0px #fff;
+  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
 }
 .reserve-a:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
   padding: 0.5em 2em;
 }
 
@@ -1003,6 +1081,7 @@ h2 {
 .in img {
   position: absolute;
   width: 125px;
+  height: 125px;
 }
 .in img.one {
   top: -60px;
@@ -1022,13 +1101,13 @@ h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -4px 4px 0px #fff;
+  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
   margin: 0 auto;
 }
 .reserves:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
   padding: 0.5em 2em;
 }
 
@@ -1452,7 +1531,7 @@ section {
     border-radius: 35px;
     text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
-    box-shadow: -4px 4px 0px #fff;
+    box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
     cursor: pointer;
     transition: 0.25s all ease-in-out;
     position: absolute;
@@ -1460,7 +1539,7 @@ section {
     right: 75px;
   }
   .reserves:hover {
-    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
     padding: 0.5em 2em;
   }
   .content {
@@ -1548,7 +1627,7 @@ section {
     border-radius: 35px;
     text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
-    box-shadow: -4px 4px 0px #fff;
+    box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
     cursor: pointer;
     transition: 0.25s all ease-in-out;
     position: absolute;
@@ -1559,7 +1638,7 @@ section {
     width: max-content;
   }
   .reserves:hover {
-    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9);
+    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
     padding: 0.5em 2em;
   }
   .preview .lemur {
