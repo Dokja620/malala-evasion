@@ -423,9 +423,6 @@ form h2 {
 .infos div input {
   text-transform: initial;
 }
-.infos div select {
-  padding-right: 50px;
-}
 
 .chos {
   display: flex;
@@ -1694,6 +1691,12 @@ section {
   #home .malala h1 {
     top: -30px;
   }
+  .circuit {
+    width: clamp(250px, 75%, 320px);
+  }
+  .circuit .text {
+    line-height: 20px;
+  }
   .content {
     width: 90%;
     margin: 0 auto;
@@ -1722,5 +1725,15 @@ section {
   .politique p {
     letter-spacing: 0px;
     font-size: 0.9em;
+  }
+}
+@media (min-width: 360px) and (max-width: 640px) {
+  .circuit {
+    width: clamp(250px, 85%, 350px);
+  }
+}
+@media (min-width: 320px) and (max-width: 360px) {
+  .circuit {
+    width: clamp(200px, 75%, 350px);
   }
 }
