@@ -3,6 +3,7 @@ const menuBurger = document.querySelector('.menu-burger');
 const navLinks = document.querySelector('.nav-links');
 const bar = document.querySelector('.bar-f');
 const bars = document.querySelector('.bar-s');
+const zoombtn = document.querySelectorAll('.but-zoom');
 
 menuBurger.addEventListener('click', () => {
     toggleMenu();
@@ -29,4 +30,11 @@ function toggleMenu() {
     });
 }
 
-// Visit Nosy Be
+zoombtn.forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.add('zoom-effect');
+        this.addEventListener('animationend', () => {
+            this.classList.remove('zoom-effect');
+        });
+    });
+});

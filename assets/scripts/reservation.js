@@ -8,7 +8,6 @@
         const priceInput = document.querySelector('input[name="price"]');
         const clientNumberInput = document.getElementById("client-number");
         const form = document.getElementById('contact-form'); // Define form here
-        const sendButton = document.querySelector('.send button'); // Adjust the selector if necessary
 
         const updatePrice = () => {
             const selectedOption = islandSelect.value;
@@ -102,14 +101,6 @@
                 handleFormSubmission();
             });
         };
-
-        sendButton.addEventListener('click', function() {
-            this.classList.add('zoom-effect');
-            // Remove the class after animation ends to allow re-triggering
-            this.addEventListener('animationend', () => {
-                this.classList.remove('zoom-effect');
-            });
-        });
 
         islandSelect.addEventListener("change", updatePrice);
         optional1Checkbox.addEventListener("change", updatePrice);

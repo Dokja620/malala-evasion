@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     padding-top: 10%;
-    overflow: hidden
 }
 
 .intro {
@@ -40,15 +39,21 @@
     text-align: center;
     border: 6px solid #ffffff49;
     font-family: 'sub-title';
-    font-size: 1.2em;
     text-shadow: 2px 2px 1px $shadow;
-    padding: 1.5em 3em;
+    padding: 1.5em 3em 2.7em;
     margin: 1rem 15px 0 15px;
-
+    position: relative;
     img {
         position: absolute;
         top: -25px;
         left: -50px;
+    }
+    .gras{
+        font-weight: 600;
+    }
+    .btn{
+        @include button-primary();
+        @include center-absolute-bottom(-25px)
     }
 }
 

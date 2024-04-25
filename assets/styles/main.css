@@ -252,7 +252,6 @@ footer span:hover::before {
   align-items: center;
   justify-content: center;
   padding-top: 10%;
-  overflow: hidden;
 }
 
 .intro h1 {
@@ -287,15 +286,35 @@ footer span:hover::before {
   text-align: center;
   border: 6px solid rgba(255, 255, 255, 0.2862745098);
   font-family: "sub-title";
-  font-size: 1.2em;
   text-shadow: 2px 2px 1px rgba(18, 18, 18, 0.6156862745);
-  padding: 1.5em 3em;
+  padding: 1.5em 3em 2.7em;
   margin: 1rem 15px 0 15px;
+  position: relative;
 }
 .soon img {
   position: absolute;
   top: -25px;
   left: -50px;
+}
+.soon .gras {
+  font-weight: 600;
+}
+.soon .btn {
+  width: max-content;
+  font-family: "text";
+  font-size: 1.1em;
+  background: #38b6ff;
+  padding: 0.5em 1.1em;
+  border-radius: 35px;
+  text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
 }
 
 /* Offers */
@@ -483,13 +502,8 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
-}
-.send button:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-  padding: 0.5em 2em;
 }
 
 .popup {
@@ -528,22 +542,37 @@ form h2 {
   padding: 5px 24px;
 }
 
-@keyframes zoomInOut {
+@-webkit-keyframes zoomInOut {
   0% {
-    transform: scale(1);
+    scale: 1;
     /* Initial state */
   }
   50% {
-    transform: scale(1.1);
+    scale: 1.1;
     /* Zoom in */
   }
   100% {
-    transform: scale(1);
+    scale: 1;
+    /* Return to initial state */
+  }
+}
+@keyframes zoomInOut {
+  0% {
+    scale: 1;
+    /* Initial state */
+  }
+  50% {
+    scale: 1.1;
+    /* Zoom in */
+  }
+  100% {
+    scale: 1;
     /* Return to initial state */
   }
 }
 /* Class to apply the animation */
 .zoom-effect {
+  -webkit-animation: zoomInOut 0.5s ease forwards;
   animation: zoomInOut 0.5s ease forwards;
   /* Adjust duration and easing as needed */
 }
@@ -565,9 +594,18 @@ form h2 {
   border: 10px solid;
   border-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
   animation: rotation 1s linear infinite;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -577,21 +615,39 @@ form h2 {
   }
 }
 .fade-in {
+  -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
   opacity: 1;
 }
 
 .fade-out {
+  -webkit-animation: fadeOut 1s;
   animation: fadeOut 1s;
   opacity: 0;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes fadeOut {
@@ -758,13 +814,8 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
-}
-.book:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-  padding: 0.5em 2em;
 }
 
 .included {
@@ -940,13 +991,8 @@ form h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
-}
-.reserve-a:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-  padding: 0.5em 2em;
 }
 
 .iranja-bivouac {
@@ -1098,14 +1144,9 @@ h2 {
   border-radius: 35px;
   text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
   border: 3px solid #fff;
-  box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
   cursor: pointer;
   transition: 0.25s all ease-in-out;
   margin: 0 auto;
-}
-.reserves:hover {
-  box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-  padding: 0.5em 2em;
 }
 
 .content {
@@ -1528,16 +1569,11 @@ section {
     border-radius: 35px;
     text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
-    box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
     cursor: pointer;
     transition: 0.25s all ease-in-out;
     position: absolute;
     bottom: 40px;
     right: 75px;
-  }
-  .reserves:hover {
-    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-    padding: 0.5em 2em;
   }
   .content {
     display: flex;
@@ -1624,7 +1660,6 @@ section {
     border-radius: 35px;
     text-shadow: 0px 0px 2px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 4px rgba(18, 18, 18, 0.6156862745), 0px 0px 8px rgba(18, 18, 18, 0.6156862745), 0px 0px 12px rgba(18, 18, 18, 0.6156862745);
     border: 3px solid #fff;
-    box-shadow: -2px 2px 0px #fff, 2px 2px 0px #fff;
     cursor: pointer;
     transition: 0.25s all ease-in-out;
     position: absolute;
@@ -1633,10 +1668,6 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
-  }
-  .reserves:hover {
-    box-shadow: -4px 4px 2px rgba(18, 18, 18, 0.9), 4px 4px 2px rgba(18, 18, 18, 0.9);
-    padding: 0.5em 2em;
   }
   .preview .lemur {
     display: none;
