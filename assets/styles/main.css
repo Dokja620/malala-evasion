@@ -542,22 +542,37 @@ form h2 {
   padding: 5px 24px;
 }
 
-@keyframes zoomInOut {
+@-webkit-keyframes zoomInOut {
   0% {
-    transform: scale(1);
+    scale: 1;
     /* Initial state */
   }
   50% {
-    transform: scale(1.1);
+    scale: 1.1;
     /* Zoom in */
   }
   100% {
-    transform: scale(1);
+    scale: 1;
+    /* Return to initial state */
+  }
+}
+@keyframes zoomInOut {
+  0% {
+    scale: 1;
+    /* Initial state */
+  }
+  50% {
+    scale: 1.1;
+    /* Zoom in */
+  }
+  100% {
+    scale: 1;
     /* Return to initial state */
   }
 }
 /* Class to apply the animation */
 .zoom-effect {
+  -webkit-animation: zoomInOut 0.5s ease forwards;
   animation: zoomInOut 0.5s ease forwards;
   /* Adjust duration and easing as needed */
 }
@@ -579,9 +594,18 @@ form h2 {
   border: 10px solid;
   border-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
   animation: rotation 1s linear infinite;
 }
 
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -591,21 +615,39 @@ form h2 {
   }
 }
 .fade-in {
+  -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
   opacity: 1;
 }
 
 .fade-out {
+  -webkit-animation: fadeOut 1s;
   animation: fadeOut 1s;
   opacity: 0;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes fadeOut {
